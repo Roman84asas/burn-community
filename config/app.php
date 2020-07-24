@@ -179,6 +179,14 @@ return [
 
     ],
 
+    'local_providers' => [
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+    ],
+
+    'production_providers' => [
+        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
+    ],
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
