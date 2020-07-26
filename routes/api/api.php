@@ -14,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router){
+    Route::post('/login', 'Auth\LoginController@login')->name('auth.login');
+    Route::post('/refresh', 'Auth\LoginController@refresh')->name('auth.refresh');
+    Route::post('/logout', 'Auth\LoginController@logout')->name('auth.logout');
+    Route::post('/register', 'Auth\RegisterController@register')->name('auth.register');
+    Route::get('/profile', 'Auth\RegisterController@profile')->name('auth.profile');
+
+    Route::post('/confirm/{token}', function (string $token) {
+        return response()->json([
+            'success' => true,
+            'token'   => $token,
+        ]);
+    })->name('auth.register.confirm');
 });
