@@ -104,11 +104,6 @@ class RegisterController extends Controller
     }
 
 
-    public function profile()
-    {
-        return response()->json(auth()->user());
-    }
-
     /**
      * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard|JWTGuard
      */

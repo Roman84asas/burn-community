@@ -154,6 +154,14 @@ class LoginController extends Controller
         ]);
     }
 
+
+    public function profile(Request $request)
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $request->user(),
+        ]);
+    }
     /**
      * @return string
      */
