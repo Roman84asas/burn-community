@@ -23,13 +23,13 @@ Route::group([
     Route::post('/refresh', 'Auth\LoginController@refresh')->name('auth.refresh');
     Route::post('/logout', 'Auth\LoginController@logout')->name('auth.logout');
     Route::post('/register', 'Auth\RegisterController@register')->name('auth.register');
-    //Route::get('/profile', 'Auth\LoginController@profile')->name('auth.profile');
-    Route::get('/profile', function (Request $request){
+    Route::get('/profile', 'Auth\LoginController@profile')->name('auth.profile');
+    /*Route::get('/profile', function (Request $request){
         return response()->json([
             'success' => true,
             'data' => $request->user(),
         ]);
-    });
+    });*/
 
     Route::post('/confirm/{token}', function (string $token) {
         return response()->json([
