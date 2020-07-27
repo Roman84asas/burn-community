@@ -30,7 +30,6 @@ Route::group([
             'data' => $request->user(),
         ]);
     });*/
-
     Route::post('/confirm/{token}', function (string $token) {
         return response()->json([
             'success' => true,
