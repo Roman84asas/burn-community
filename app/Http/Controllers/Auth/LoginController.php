@@ -154,7 +154,10 @@ class LoginController extends Controller
         ]);
     }
 
-
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function profile(Request $request)
     {
         return response()->json([
