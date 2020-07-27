@@ -165,6 +165,7 @@ class LoginController extends Controller
             'data' => $request->user(),
         ]);
     }
+
     /**
      * @return string
      */
