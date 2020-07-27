@@ -37,4 +37,5 @@ Route::group([
             'token'   => $token,
         ]);
     })->name('auth.register.confirm');
+
 });
