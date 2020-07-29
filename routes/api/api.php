@@ -1,7 +1,7 @@
 <?php
 
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+/* @var Route $router */
 
 Route::group([
     'middleware' => 'api',
@@ -36,5 +38,7 @@ Route::group([
             'token'   => $token,
         ]);
     })->name('auth.register.confirm');
-
 });
+
+Route::get('articles', 'ArticlesController@index')
+    ->middleware('api');
