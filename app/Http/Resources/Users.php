@@ -9,15 +9,20 @@ use Illuminate\Http\Resources\Json\JsonResource;
 class Users extends JsonResource
 {
 
-
-    public function toArray($request)
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request): array
     {
         return [
-            'id'            => $this->id,
-            'name'          => $this->name,
-            'email'         => $this->email,
-            'avatar'        => $this->avatar,
-            'is_confirmed'  => $this->is_confirmed
+            'id'            => $this->resource->id,
+            'name'          => $this->resource->name,
+            'email'         => $this->resource->email,
+            'avatar'        => $this->resource->avatar,
+            'is_confirmed'  => $this->resource->is_confirmed
         ];
     }
 }

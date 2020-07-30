@@ -17,28 +17,32 @@ use Illuminate\Support\Facades\Route;
 
 /* @var Route $router */
 
+
+//Группа не требующая аутентификации
 Route::group([
     'middleware' => 'api',
-    'prefix' => 'auth'
-], function ($router){
-    Route::post('/login', 'Auth\LoginController@login')->name('auth.login');
-    Route::post('/refresh', 'Auth\LoginController@refresh')->name('auth.refresh');
-    Route::post('/logout', 'Auth\LoginController@logout')->name('auth.logout');
-    Route::post('/register', 'Auth\RegisterController@register')->name('auth.register');
-    Route::get('/profile', 'Auth\LoginController@profile')->name('auth.profile');
-    /*Route::get('/profile', function (Request $request){
-        return response()->json([
-            'success' => true,
-            'data' => $request->user(),
-        ]);
-    });*/
+], function (){
+    //Группа утентификации
+    Route::post('/login', 'Auth\LoginController@login')->name('login');
+    Route::post('/refresh', 'Auth\LoginController@refresh')->name('refresh');
+    Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+    Route::post('/register', 'Auth\RegisterController@register')->name('register');
     Route::post('/confirm/{token}', function (string $token) {
         return response()->json([
             'success' => true,
             'token'   => $token,
         ]);
     })->name('auth.register.confirm');
+
+
+    //Группа профиль
+    Route::get('profile/{id}', 'UserController@showProfile');
+
+    //Группа Статьи
+    Route::get('articles', 'ArticlesController@index');
 });
 
-Route::get('articles', 'ArticlesController@index')
-    ->middleware('api');
+
+
+//Группа требующая аутентификации
+Route::get('/profiles', 'UserController@index')->name('profiles')->middleware('auth');

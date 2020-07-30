@@ -1,21 +1,17 @@
 <?php
 
-//declare(strict_types=1);
 
 namespace App\Http\Resources;
 
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-/**
- * Class UserResource.
- */
-class UserCollection extends ResourceCollection
+class ProfileCollection extends ResourceCollection
 {
 
 
 
-    public $collection = Users::class;
+    public $collection = Profile::class;
 
     public function toArray($request)
     {
