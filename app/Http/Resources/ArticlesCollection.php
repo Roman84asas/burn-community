@@ -8,6 +8,7 @@ class ArticlesCollection extends ResourceCollection
 {
 
     public $collection = Articles::class;
+
     public function toArray($request)
     {
         return [

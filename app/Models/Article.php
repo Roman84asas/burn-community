@@ -19,7 +19,8 @@ class Article extends Model
         'title',
         'description',
         'image',
-        'content_source',
+        'content',
+        'b2b',
         'published_at',
     ];
 }
