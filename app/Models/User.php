@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -39,7 +41,13 @@ class User extends Authenticatable implements JWTSubject
         'email_verified_at' => 'datetime',
     ];
 
-
+    /**
+    * @return MorphMany
+    */
+    public function topic(): MorphMany
+    {
+        return $this->morphMany(Topic::class, 'user');
+    }
 
     /**
      * @return string
@@ -54,6 +62,8 @@ class User extends Authenticatable implements JWTSubject
      */
     public function getJWTCustomClaims(): array
     {
-        return [];
+        return [
+            'name' => $this->name,
+        ];
     }
 }

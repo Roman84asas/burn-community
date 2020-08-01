@@ -7,9 +7,11 @@ namespace App\Http\Controllers\Auth;
 //use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Symfony\Component\Console\Input\Input;
 use Symfony\Component\HttpFoundation\Response;
 use Tymon\JWTAuth\JWTGuard;
 
@@ -25,7 +27,7 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-    use ThrottlesLogins;
+    use AuthenticatesUsers;
     /**
      * Where to redirect users after login.
      *
@@ -53,6 +55,7 @@ class LoginController extends Controller
         }
 
         if ($token = $this->attemptLogin($request)) {
+
             return $this->sendLoginResponse($request, $token);
         }
 
@@ -123,6 +126,8 @@ class LoginController extends Controller
         return $this->authenticated($request, $user, $token);
     }
 
+
+
     /**
      * @param \Illuminate\Http\Request $request
      * @param \App\Models\User         $user
@@ -132,6 +137,8 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, User $user, string $token): Response
     {
+        /*$user->remember_token = $token;
+        $user->save();*/
         return response()->json([
             'success' => true,
             'data'    => array_merge([
@@ -154,17 +161,6 @@ class LoginController extends Controller
         ]);
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function profile(Request $request)
-    {
-        return response()->json([
-            'success' => true,
-            'data' => $request->user(),
-        ]);
-    }
 
     /**
      * @return string

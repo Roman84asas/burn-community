@@ -40,6 +40,10 @@ Route::group([
 
     //Группа Статьи
     Route::get('articles', 'ArticlesController@index');
+    Route::get('articles/{slug}', 'ArticlesController@show');
+
+    //Группа Темы
+    Route::get('topic', 'TopicController@index');
 });
 
 
