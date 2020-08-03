@@ -50,6 +50,14 @@ class User extends Authenticatable implements JWTSubject
     }
 
     /**
+     * @return MorphMany
+     */
+    public function articles(): MorphMany
+    {
+        return $this->morphMany(Article::class, 'user');
+    }
+
+    /**
      * @return string
      */
     public function getJWTIdentifier(): string

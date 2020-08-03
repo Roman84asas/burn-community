@@ -34,10 +34,12 @@ class TagsSeeder extends Seeder
             try {
                 $tag = Tag::create([
                     'name' => $this->faker->words(random_int(0, 8) ? 1 : 2, true),
+                    'count' => (random_int(0, 8)),
                 ]);
 
                 foreach (range(0, random_int(1, count($topicIds))) as $j) {
                     $topicId = $this->faker->randomElement($topicIds);
+
 
                     \DB::table('topic_tags')->insert([
                         'topic_id' => $topicId,

@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Article extends Model
 {
@@ -23,4 +25,13 @@ class Article extends Model
         'b2b',
         'published_at',
     ];
+
+
+    /**
+     * @return MorphTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->BelongsTo(User::class);
+    }
 }

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ArticlesCollection;
+use App\Models\Article;
+use App\Models\Topic;
+use App\Repositories\GetTooIdInTag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,16 +17,18 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return array
      */
     public function index()
     {
-        return view('home');
+        return [
+            'topicLatest'    => Topic::latestPublished()->take(5)->get(),
+            'topTags'        => GetTooIdInTag::GetTag(),
+            'articlesLatest' => new ArticlesCollection(Article::paginate(3)),
+        ];
     }
 }

@@ -16,6 +16,7 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $t) {
             $t->increments('id');
             $t->string('name')->unique();
+            $t->string('count')->index();
         });
 
         Schema::create('topic_tags', function (Blueprint $t) {

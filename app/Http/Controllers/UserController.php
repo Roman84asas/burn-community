@@ -24,6 +24,6 @@ class UserController extends Controller
     public function showProfile($id)
     {
 
-        return new ProfileCollection($user = User::findOrFail(['id' => $id]));
+        return new ProfileCollection($user = User::find(['id' => $id]));
     }
 }

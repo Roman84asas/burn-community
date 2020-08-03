@@ -11,6 +11,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+/**
+ * @method static latestPublished()
+ */
 class Topic extends Model
 {
     /**
@@ -22,12 +25,10 @@ class Topic extends Model
      * @var string[]
      */
     protected $fillable = [
-        'id',
         'user_id',
         'title',
-        'description',
         'image',
-        'content',
+        'content_source',
         'status',
         'b2b',
         'published_at',
@@ -41,6 +42,7 @@ class Topic extends Model
             ->latest('published_at')
             ->published();
     }
+
 
 
     /**

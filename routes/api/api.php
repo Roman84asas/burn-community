@@ -32,7 +32,7 @@ Route::group([
             'success' => true,
             'token'   => $token,
         ]);
-    })->name('auth.register.confirm');
+    })->name('confirm');
 
 
     //Группа профиль
@@ -44,6 +44,12 @@ Route::group([
 
     //Группа Темы
     Route::get('topic', 'TopicController@index');
+
+    //Домашняя
+    Route::get('/', 'HomeController@index');
+
+
+    Route::get('/tag/{id}', 'TopicController@indexForTag');
 });
 
 

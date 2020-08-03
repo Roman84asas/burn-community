@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\TopicCollection;
 use App\Models\Tag;
 use App\Models\Topic;
+use App\Repositories\GetTooIdInTag;
 use Illuminate\Http\Request;
 
 class TopicController extends Controller
@@ -21,7 +22,10 @@ class TopicController extends Controller
 
     public function indexForTag($id)
     {
-        return $id;
+
+       return [
+        'topicLatest' => Tag::topicFromTagPublished($id),
+        ];
     }
 
 }

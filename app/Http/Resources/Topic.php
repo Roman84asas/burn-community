@@ -21,7 +21,7 @@ class Topic extends JsonResource
     {
         return [
             'id'                => $this->resource->id,
-            'user'              => User::findOrFail($this->resource->user_id),
+            'user'              => User::find($this->resource->user_id),
             'title'             => $this->resource->title,
             'description'       => $this->resource->description,
             'image'             => $this->resource->image,

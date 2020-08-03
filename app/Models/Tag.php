@@ -11,6 +11,8 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * Class Tag.
@@ -33,4 +35,23 @@ class Tag extends Model
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public static function TopicFromTagPublished($id)
+    {
+        $tag = Tag::find($id);
+        return $tag->topics()->paginate(2);
+    }
+
+
+    /**
+    * @return BelongsToMany
+    */
+    public function topics(): BelongsToMany
+    {
+        return $this->belongsToMany(Topic::class, 'topic_tags');
+    }
 }
