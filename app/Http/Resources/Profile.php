@@ -21,7 +21,8 @@ class Profile extends JsonResource
         return [
             'id'            => $this->resource->id,
             'name'          => $this->resource->name,
-            'avatar'        => $this->resource->avatar
+            'avatar'        => $this->resource->avatar,
+            'last_activity' => $this->resource->last_activity,
         ];
     }
 }

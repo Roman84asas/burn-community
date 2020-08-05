@@ -10,12 +10,22 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Str;
 
-/**
- * @method static latestPublished()
- */
+
+
 class Topic extends Model
 {
+
+    /**
+     * @var array
+     */
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'published_at'
+    ];
+
     /**
      * @var string
      */
@@ -80,6 +90,26 @@ class Topic extends Model
 
         return $isAuthor || ($isPublished && $isAllowPublishedTime);
     }*/
+
+    /**
+    * @return string
+    */
+    public function getCapitalizeTitleAttribute(): string
+    {
+        return Str::ucfirst($this->title);
+    }
+
+    /**
+     * @return string
+     */
+    public function scopeNicePublishedDateAttribute()
+    {
+        if ($this->published_at > Carbon::now()->subMonth()) {
+            return $this->published_at->diffForHumans();
+        }
+
+        return $this->published_at->toDateTimeString();
+    }
 
 
     /**

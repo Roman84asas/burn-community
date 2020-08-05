@@ -14,7 +14,6 @@ class TopicController extends Controller
 
     public function index()
     {
-
         return [
             'topicLatest' => Topic::latestPublished()->paginate(5),
         ];
@@ -22,7 +21,6 @@ class TopicController extends Controller
 
     public function indexForTag($id)
     {
-
        return [
         'topicLatest' => Tag::topicFromTagPublished($id),
         ];

@@ -2,16 +2,21 @@
 
 namespace App\Models;
 
+
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 
 class User extends Authenticatable implements JWTSubject
 {
+
     use Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +24,12 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'is_confirmed', 'avatar',
+        'id',
+        'name',
+        'email',
+        'password',
+        'is_confirmed',
+        'avatar',
     ];
 
 
@@ -40,6 +50,10 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function scopeOnline() {
+        return ($this->last_activity > new \DateTime('-15 minutes') && user()->check()) ? true : false;
+    }
 
     /**
     * @return MorphMany

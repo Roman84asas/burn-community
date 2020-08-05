@@ -31,7 +31,9 @@ class TopicSeeder extends Seeder
             Topic::create([
                 'user_id'           => $this->faker->randomElement($users->toArray())['id'],
                 'title'             => $this->faker->words(random_int(2, 8), true),
-                'content_source'    => $this->faker->sentence(random_int(25, 35), true),
+                'likes'             => $this->faker->numberBetween(5, 500),
+                'messages'          => $this->faker->numberBetween(5, 500),
+                'views'             => $this->faker->numberBetween(5, 500),
                 'content_rendered'  => $this->faker->sentence(random_int(25, 35), true),
                 'status'            => $this->faker->randomElement(['Draft', 'Review', 'Published']),
                 'published_at'      => Carbon::now()

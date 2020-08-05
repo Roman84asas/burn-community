@@ -17,9 +17,11 @@ class CreateTopicTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id')->index('topic_user_id_index');
             $table->string('title');
-            $table->string('image')->nullable();;
+            $table->string('image')->nullable();
             $table->string('slug')->unique()->index();
-            $table->longText('content_source');
+            $table->integer('messages')->default(0);
+            $table->integer('likes')->default(0);
+            $table->integer('views')->default(0);
             $table->longText('content_rendered');
             $table->enum('status', [
                 'Draft',        // Черновик

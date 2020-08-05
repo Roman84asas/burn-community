@@ -7,6 +7,7 @@ namespace App\Http\Controllers\Auth;
 //use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
@@ -55,7 +56,6 @@ class LoginController extends Controller
         }
 
         if ($token = $this->attemptLogin($request)) {
-
             return $this->sendLoginResponse($request, $token);
         }
 
@@ -177,6 +177,7 @@ class LoginController extends Controller
      */
     public function logout(Request $request): Response
     {
+
         $this->guard()->logout();
 
         return response()->json([

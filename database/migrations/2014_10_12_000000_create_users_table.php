@@ -19,11 +19,15 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('api_token')->nullable();
             $table->string('avatar')->nullable();
             $table->string('country')->nullable();
             $table->string('city')->nullable();
+            $table->integer('messages')->default(0);
+            $table->integer('likes')->default(0);
+            $table->integer('dislike')->default(0);
+            $table->dateTime('last_activity')->nullable();;
             $table->boolean('is_confirmed')->default(false);
+            $table->string('api_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->longText('content');
+            $table->integer('views')->default(0);
             $table->boolean('b2b')->default(false);
             $table->string('slug')->unique()->index();
             $table->timestamp('published_at');
