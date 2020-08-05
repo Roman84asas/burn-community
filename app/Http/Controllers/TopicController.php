@@ -14,6 +14,7 @@ class TopicController extends Controller
 
     public function index()
     {
+
         return [
             'topicLatest' => Topic::latestPublished()->paginate(5),
         ];
