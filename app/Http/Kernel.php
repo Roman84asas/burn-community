@@ -44,7 +44,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
             \App\Http\Middleware\ForceJsonResponse::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            //\Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\IsUserOnline::class,
         ],
     ];

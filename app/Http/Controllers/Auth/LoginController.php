@@ -73,6 +73,7 @@ class LoginController extends Controller
             'success' => true,
             'data'    => [
                 'token' => $this->guard()->refresh(),
+                'token_type' => 'bearer',
             ],
         ]);
     }
