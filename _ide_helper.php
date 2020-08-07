@@ -2450,7 +2450,7 @@ namespace Illuminate\Support\Facades {
         }
 
         /**
-         * Register an array of class-based components.
+         * Register an array of class-based src.
          *
          * @param array $components
          * @param string $prefix

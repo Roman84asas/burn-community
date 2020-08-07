@@ -1,0 +1,23 @@
+@import './fonts';
+
+// Variables
+@import './variables';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Myriad Pro', 'Fira Sans', 'Helvetica Neue', 'Object Sans',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@import "./components/Header";

@@ -25,10 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return [
+        return view('app');/*[
             'topicLatest'    => Topic::latestPublished()->take(5)->get(),
             'topTags'        => GetTooIdInTag::GetTag(),
             'articlesLatest' => new ArticlesCollection(Article::paginate(3)),
-        ];
+        ]*/
     }
 }
