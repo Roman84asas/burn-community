@@ -183,3 +183,80 @@ body {
   width: 60px;
 }
 
+.home_search {
+  background: url(/images/kalian1.jpg?0cab2497b85de089cdfba43e049abcc3) 100% 100% no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 513px;
+  display: flex;
+  align-items: center;
+}
+
+.home_search .home_search_block {
+  width: 696px;
+  height: 305px;
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 40px 35px;
+}
+
+.home_search .home_search_block .home_search_title {
+  font-family: Myriad Pro;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+}
+
+.home_search .home_search_block .home_search_description {
+  display: block;
+  font-family: Helvetica Neue LT Pro;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.004em;
+  color: #3E3E3E;
+  margin-left: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.home_search .home_search_block .home_search_description::before {
+  content: "";
+  background: #EAB817;
+  position: absolute;
+  width: 4px;
+  height: 24px;
+  border-radius: 1px;
+  left: -10px;
+  top: 3px;
+}
+
+.home_search .home_search_block .home_search_statistic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.home_search .home_search_block .home_search_statistic img {
+  margin-right: 8px;
+}
+
+.home_search .home_search_block .home_search_statistic > div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-family: Helvetica Neue LT Pro;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.004em;
+  color: #3E3E3E;
+}
+

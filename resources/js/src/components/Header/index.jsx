@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import LogoIcon from '../../img/logotype.png'
-import VkIcon from '../../img/vk.svg'
-import InstaIcon from '../../img/instagram.svg'
-import Localization from '../../img/globus.svg'
+import LogoIcon from '../../../../assets/img/logotype.png'
+import VkIcon from '../../../../assets/img/vk.svg'
+import InstaIcon from '../../../../assets/img/instagram.svg'
+import Localization from '../../../../assets/img/globus.svg'
 
 
 const Header = () => {
