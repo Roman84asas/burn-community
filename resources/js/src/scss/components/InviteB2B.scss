@@ -1,0 +1,73 @@
+.invite_card {
+    background-image: url(../../../../assets/img/kalian_b2b.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 288px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 288px;
+        width: 100%
+    }
+    .invite_body {
+        max-width: 720px;
+        .invite_body_title {
+            font-family: "Myriad Pro";
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.0024em;
+            color: $wite;
+            margin-bottom: 20px;
+        }
+        .invite_body_description {
+            font-family: "Helvetica Neue";
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.004em;
+            color: $separator;
+            margin-bottom: 25px;
+        }
+        .invite_body_submits {
+            display: flex;
+            .invite_body_invite {
+                font-family: "Object Sans";
+                margin: auto 35px auto 0;
+                width: 200px;
+                height: 48px;
+                border-radius: 4px;
+                background: $yellow;
+                color: $black;
+                font-size: 16px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.004em;
+                text-decoration: none;
+            }
+            .invite_body_submit {
+                font-family: "Object Sans";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.004em;
+                text-decoration: none;
+                color: $space-grey;
+            }
+        }
+
+    }
+}

@@ -15,11 +15,23 @@ const Header = () => {
             </Link>
             <div className="header__navigation">
                 <div className="navigations">
-                    <a href="/">Форум</a>
-                    <a href="/">Онлайн школа</a>
-                    <a href="/">Библиотека</a>
-                    <a href="/">Помощь</a>
-                    <a href="/">Партнеры</a>
+                    <nav>
+                        <Link to="/">
+                            Форум
+                        </Link>
+                        <Link to="/">
+                            Онлайн школа
+                        </Link>
+                        <Link to="/">
+                            Библиотека
+                        </Link>
+                        <Link to="/">
+                            Помощь
+                        </Link>
+                        <Link to="/">
+                            Партнеры
+                        </Link>
+                    </nav>
                 </div>
             </div>
             <div className="header__social">

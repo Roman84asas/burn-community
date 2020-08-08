@@ -1,0 +1,51 @@
+.home_info_content {
+    display: flex;
+    .info_content {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+
+        .info_content_img1 {
+            background: url(../../../../assets/img/book.svg) 100% 100% no-repeat;
+            width: 48.05px;
+            height: 48px;
+            margin: 30px auto 15px auto;
+
+        }
+        .info_content_img2 {
+            background: url(../../../../assets/img/protest.svg) 100% 100% no-repeat;
+            width: 48.05px;
+            height: 48px;
+            margin: 30px auto 15px auto;
+
+        }
+        .info_content_img3 {
+            background: url(../../../../assets/img/sport-team.svg) 100% 100% no-repeat;
+            width: 48.05px;
+            height: 48px;
+            margin: 30px auto 15px auto;
+
+        }
+        .info_content_title {
+            font-family: 'Helvetica Neue';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 0.008em;
+            color: $black;
+            margin-bottom: 10px;
+        }
+        .info_content_description {
+            width: 290px;
+            font-family: 'Helvetica Neue';
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.004em;
+            color: $grey;
+            margin: 0 auto 35px auto;
+        }
+    }
+}

@@ -70007,17 +70007,17 @@ var Header = function Header() {
     className: "header__navigation"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "navigations"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "\u0424\u043E\u0440\u0443\u043C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "\u041E\u043D\u043B\u0430\u0439\u043D \u0448\u043A\u043E\u043B\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "\u041F\u043E\u043C\u043E\u0449\u044C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u044B"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "\u0424\u043E\u0440\u0443\u043C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "\u041E\u043D\u043B\u0430\u0439\u043D \u0448\u043A\u043E\u043B\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "\u041F\u043E\u043C\u043E\u0449\u044C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u044B")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header__social"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://vk.com/"
@@ -70086,6 +70086,16 @@ var HomeSearch = function HomeSearch() {
       inputValue = _useState2[0],
       SetValue = _useState2[1];
 
+  var handeChange = function handeChange(e) {
+    SetValue(e.target.value);
+  };
+
+  var clickSearchForm = function clickSearchForm(e) {
+    alert('Содержание формы: ' + inputValue);
+    SetValue("");
+    e.preventDefault();
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home_search"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -70125,7 +70135,13 @@ var HomeSearch = function HomeSearch() {
     type: "text",
     placeholder: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443",
     value: inputValue,
+    onChange: handeChange,
     className: "home_search_input_block"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "submit",
+    value: "",
+    className: "search_home_submit",
+    onClick: clickSearchForm
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)))));
 };
 
@@ -70133,11 +70149,50 @@ var HomeSearch = function HomeSearch() {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/InviteB2B/index.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/src/components/InviteB2B/index.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var InviteB2B = function InviteB2B() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "invite_card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "invite_body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "invite_body_title"
+  }, "\u0414\u043B\u044F \u0412\u0430\u0441 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u0430\u044F \u0438\u043D\u0434\u0443\u0441\u0442\u0440\u0438\u044F - \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u0437\u0430\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0438\u043B\u0438 \u0432\u044B \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0435\u0442\u0435 \u043D\u0430\u0447\u0430\u0442\u044C \u0431\u0438\u0437\u043D\u0435\u0441 \u0432 \u0434\u0430\u043D\u043D\u043E\u0439 \u0441\u0444\u0435\u0440\u0435 ?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "invite_body_description"
+  }, "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435 \u0432 \u0437\u0430\u043A\u0440\u044B\u0442\u044B\u0439 \u0440\u0430\u0437\u0434\u0435\u043B Burn Community \u0434\u043B\u044F B2b "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "invite_body_submits"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/",
+    className: "invite_body_invite"
+  }, "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u043F\u0440\u0438\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/",
+    className: "invite_body_submit"
+  }, "\u0412\u043E\u0439\u0442\u0438")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (InviteB2B);
+
+/***/ }),
+
 /***/ "./resources/js/src/components/index.js":
 /*!**********************************************!*\
   !*** ./resources/js/src/components/index.js ***!
   \**********************************************/
-/*! exports provided: Header, HomeSearch */
+/*! exports provided: Header, HomeSearch, InviteB2B */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70147,6 +70202,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _HomeSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeSearch */ "./resources/js/src/components/HomeSearch/index.jsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HomeSearch", function() { return _HomeSearch__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _InviteB2B__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InviteB2B */ "./resources/js/src/components/InviteB2B/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InviteB2B", function() { return _InviteB2B__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
 
 
 
@@ -70204,7 +70263,33 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home_content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["HomeSearch"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["HomeSearch"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home_info_content wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_img1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_title"
+  }, "\u041F\u043E\u0441\u0435\u0442\u0438 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u0443\u044E \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0443"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "info_content_description"
+  }, "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0442\u0435\u0441\u044C \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u0440\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u043E\u043C\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_img2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_title"
+  }, "\u0417\u0430\u0434\u0430\u0439 \u0432\u043E\u043F\u0440\u043E\u0441 \u043D\u0430 \u0444\u043E\u0440\u0443\u043C\u0435"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "info_content_description"
+  }, "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0442\u0435\u0441\u044C \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u0440\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u043E\u043C\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_img3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info_content_title"
+  }, "\u041F\u043E\u043B\u0443\u0447\u0438 \u043F\u043E\u043C\u043E\u0449\u044C \u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "info_content_description"
+  }, "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0442\u0435\u0441\u044C \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u0440\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u043E\u043C\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["InviteB2B"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);

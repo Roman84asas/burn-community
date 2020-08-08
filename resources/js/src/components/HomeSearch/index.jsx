@@ -7,7 +7,14 @@ import MessagesIcon from '../../../../assets/img/jam_messages.svg'
 
 const HomeSearch = () => {
     const [inputValue, SetValue] = useState("");
-
+    const handeChange = (e) => {
+        SetValue(e.target.value);
+    }
+    const clickSearchForm = (e) => {
+        alert('Содержание формы: ' + inputValue)
+        SetValue("");
+        e.preventDefault();
+    }
     return(
         <div className="home_search">
             <div className="wrapper">
@@ -39,7 +46,8 @@ const HomeSearch = () => {
                         </div>
                     </div>
                     <div className="home_search_input">
-                        <input type="text" placeholder="Поиск по сообществу" value={inputValue} className="home_search_input_block" />
+                        <input type="text" placeholder="Поиск по сообществу" value={inputValue} onChange={handeChange}  className="home_search_input_block" />
+                        <input type="submit" value="" className="search_home_submit" onClick={clickSearchForm}/>
                     <div />
                 </div>
                 </div>

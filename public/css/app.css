@@ -73,6 +73,8 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Myriad Pro", "Fira Sans", "Helvetica Neue", "Object Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -108,14 +110,17 @@ body {
 }
 
 .header__navigation .navigations {
-  display: flex;
-  align-items: center;
   margin-right: 110px;
 }
 
-.header__navigation .navigations a {
+.header__navigation .navigations nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation .navigations nav a {
   margin-right: 25px;
-  font-family: Object Sans;
+  font-family: "Object Sans";
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.004em;
@@ -123,7 +128,7 @@ body {
   color: #100D00;
 }
 
-.header__navigation .navigations a:last-child {
+.header__navigation .navigations nav a:last-child {
   margin-right: 0;
 }
 
@@ -168,7 +173,7 @@ body {
 }
 
 .header__localization .navig_localization {
-  font-family: Object Sans;
+  font-family: "Object Sans";
   font-size: 16px;
   line-height: 21px;
   display: flex;
@@ -203,7 +208,7 @@ body {
 }
 
 .home_search .home_search_block .home_search_title {
-  font-family: Myriad Pro;
+  font-family: "Myriad Pro";
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: 900;
@@ -215,8 +220,8 @@ body {
 
 .home_search .home_search_block .home_search_description {
   display: block;
-  font-family: Helvetica Neue LT Pro;
-  font-weight: 500;
+  font-family: "Helvetica Neue";
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.004em;
@@ -234,7 +239,6 @@ body {
   height: 24px;
   border-radius: 1px;
   left: -10px;
-  top: 3px;
 }
 
 .home_search .home_search_block .home_search_statistic {
@@ -252,11 +256,186 @@ body {
   display: flex;
   height: 100%;
   align-items: center;
-  font-family: Helvetica Neue LT Pro;
-  font-weight: 500;
+  font-family: "Helvetica Neue";
+  font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.004em;
   color: #3E3E3E;
+}
+
+.home_search .home_search_block .home_search_input {
+  width: 100%;
+  position: relative;
+}
+
+.home_search .home_search_block .home_search_input::before {
+  content: "";
+  background: url(/images/search-light.svg?92e8221ad6b020fedaab1dd16ddac37e);
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  height: 23px;
+  width: 23px;
+}
+
+.home_search .home_search_block .home_search_input .home_search_input_block {
+  width: 100%;
+  height: 40px;
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.004em;
+  color: #BBBBBB;
+  border: 1px solid #989898;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 50px;
+}
+
+.home_search .home_search_block .home_search_input .search_home_submit {
+  background: url(/images/right-ligth.svg?8cbd765b41a3bd024c13b5878e30bb05) center center no-repeat;
+  border: none;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.invite_card {
+  background-image: url(/images/kalian_b2b.jpg?9fca2366d63f8ca46c876d95c89b5d42);
+  background-position: right;
+  background-repeat: no-repeat;
+  min-height: 288px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.invite_card::before {
+  content: "";
+  background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 288px;
+  width: 100%;
+}
+
+.invite_card .invite_body {
+  max-width: 720px;
+}
+
+.invite_card .invite_body .invite_body_title {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0024em;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.invite_card .invite_body .invite_body_description {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.004em;
+  color: #ECECEC;
+  margin-bottom: 25px;
+}
+
+.invite_card .invite_body .invite_body_submits {
+  display: flex;
+}
+
+.invite_card .invite_body .invite_body_submits .invite_body_invite {
+  font-family: "Object Sans";
+  margin: auto 35px auto 0;
+  width: 200px;
+  height: 48px;
+  border-radius: 4px;
+  background: #EAB817;
+  color: #100D00;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.004em;
+  text-decoration: none;
+}
+
+.invite_card .invite_body .invite_body_submits .invite_body_submit {
+  font-family: "Object Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.004em;
+  text-decoration: none;
+  color: #F9F9F9;
+}
+
+.home_info_content {
+  display: flex;
+}
+
+.home_info_content .info_content {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home_info_content .info_content .info_content_img1 {
+  background: url(/images/book.svg?990603603f634af9bf9f68e0f72faf21) 100% 100% no-repeat;
+  width: 48.05px;
+  height: 48px;
+  margin: 30px auto 15px auto;
+}
+
+.home_info_content .info_content .info_content_img2 {
+  background: url(/images/protest.svg?62356924abff1450fef51c57231060c5) 100% 100% no-repeat;
+  width: 48.05px;
+  height: 48px;
+  margin: 30px auto 15px auto;
+}
+
+.home_info_content .info_content .info_content_img3 {
+  background: url(/images/sport-team.svg?4c3508632f5d28dae0589b03722c7786) 100% 100% no-repeat;
+  width: 48.05px;
+  height: 48px;
+  margin: 30px auto 15px auto;
+}
+
+.home_info_content .info_content .info_content_title {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.008em;
+  color: #100D00;
+  margin-bottom: 10px;
+}
+
+.home_info_content .info_content .info_content_description {
+  width: 290px;
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.004em;
+  color: #3E3E3E;
+  margin: 0 auto 35px auto;
 }
 
