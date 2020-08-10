@@ -70039,7 +70039,7 @@ var Header = function Header() {
     alt: "\u0421\u043C\u0435\u043D\u0430 \u044F\u0437\u044B\u043A\u0430"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navig_localization"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u0421\u041D\u0413 / \u0420\u0423"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u0421\u041D\u0413 / ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0420\u0423")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);

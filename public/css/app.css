@@ -1,71 +1,62 @@
 @font-face {
   font-family: "Helvetica Neue";
-  src: url(/fonts/HelveticaNeueCyr-Bold.eot?5bbf832fec501cfb6afae24d67d39a0a);
-  src: url(/fonts/HelveticaNeueCyr-Bold.eot?5bbf832fec501cfb6afae24d67d39a0a) format("embedded-opentype"), url(/fonts/HelveticaNeueCyr-Bold.woff?ca12a719cd344dd391d9f51e7bbd9b33) format("woff"), url(/fonts/HelveticaNeueCyr-Bold.ttf?50475e9398305457c4ead55941b10a0f) format("truetype");
+  src: url(/fonts/HelveticaNeueLTPro-Bd.otf?4e458d3bc89ac8360746ce8de29ae892);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url(/fonts/HelveticaNeueCyr-Roman.eot?e2cd70ac11658e1d9c328d345d86ff7f);
-  src: url(/fonts/HelveticaNeueCyr-Roman.eot?e2cd70ac11658e1d9c328d345d86ff7f) format("embedded-opentype"), url(/fonts/HelveticaNeueCyr-Roman.woff?510e1c045e61e20233f9ecf23d031703) format("woff"), url(/fonts/HelveticaNeueCyr-Roman.ttf?fadb2adb0984cb4e053e45428d96e01a) format("truetype");
+  src: url(/fonts/HelveticaNeueLTPro-Roman.otf?14660c8379033f64b4c9f240733e6ff6);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url(/fonts/HelveticaNeueCyr-Medium.eot?ae503b13b400cfaea50d767b4b61b810);
-  src: url(/fonts/HelveticaNeueCyr-Medium.eot?ae503b13b400cfaea50d767b4b61b810) format("embedded-opentype"), url(/fonts/HelveticaNeueCyr-Medium.woff?2a615283a212836fd6c33bf32bc87ebf) format("woff"), url(/fonts/HelveticaNeueCyr-Medium.ttf?e603c690f754c70654004a753c17b60b) format("truetype");
+  src: url(/fonts/HelveticaNeueLTPro-Md.otf?89d2d04119df126cbff59adb23ccd72f);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url(/fonts/HelveticaNeueCyr-Light.eot?990d529761b45e6cff159655a2eac3c9);
-  src: url(/fonts/HelveticaNeueCyr-Light.eot?990d529761b45e6cff159655a2eac3c9) format("embedded-opentype"), url(/fonts/HelveticaNeueCyr-Light.woff?e914a2dd1cd1d3c3944e0ad0e950046d) format("woff"), url(/fonts/HelveticaNeueCyr-Light.ttf?307781839e3e303ff49b223dc242baac) format("truetype");
+  src: url(/fonts/HelveticaNeueLTPro-Lt.otf?2e02623d0036c578c52da368d1e18b9a);
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Myriad Pro";
-  src: url(/fonts/MyriadPro-Black.eot?64be56aaf2cdf7e03eefb85f241c5b4a);
-  src: url(/fonts/MyriadPro-Black.eot?64be56aaf2cdf7e03eefb85f241c5b4a) format("embedded-opentype"), url(/fonts/MyriadPro-Black.woff?26ace6126968ee1b77a6780f54d6581c) format("woff"), url(/fonts/MyriadPro-Black.ttf?06b251661dab072d9a51d3371827a1fb) format("truetype");
+  src: url(/fonts/MyriadPro-Black.otf?73748b2856e5a7b79363075ac303b122);
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Myriad Pro";
-  src: url(/fonts/MyriadPro-Bold.eot?791db10c0c385985266105a2ffba7ed4);
-  src: url(/fonts/MyriadPro-Bold.eot?791db10c0c385985266105a2ffba7ed4) format("embedded-opentype"), url(/fonts/MyriadPro-Bold.woff?cd0e440e50031db4a74b3f3b62916b44) format("woff"), url(/fonts/MyriadPro-Bold.ttf?d5b486487376f7295854815db1a93224) format("truetype");
+  src: url(/fonts/MyriadPro-Bold.otf?bfc84fcb6a1c571b2b96ae83833e6de1);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Myriad Pro";
-  src: url(/fonts/MyriadPro-Semibold.eot?047d7c35501af95d78bbe3a8bd856129);
-  src: url(/fonts/MyriadPro-Semibold.eot?047d7c35501af95d78bbe3a8bd856129) format("embedded-opentype"), url(/fonts/MyriadPro-Semibold.woff?6f86fd297a6d5c1f76e5a4412ccc8eb9) format("woff"), url(/fonts/MyriadPro-Semibold.ttf?e753d434a34f00b2afa45aa4771ecee2) format("truetype");
+  src: url(/fonts/MyriadPro-Semibold.otf?86bb1295004f3fbe40abef46553807f5);
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Myriad Pro";
-  src: url(/fonts/MyriadPro-Regular.eot?1d31e744cee077ef32f699ca2d3e8a0c);
-  src: url(/fonts/MyriadPro-Regular.eot?1d31e744cee077ef32f699ca2d3e8a0c) format("embedded-opentype"), url(/fonts/MyriadPro-Regular.woff?396e556a2d523ca7b2829a60a3b04732) format("woff"), url(/fonts/MyriadPro-Regular.ttf?be82e3850974c1ccddfcf305d93ad7ce) format("truetype");
+  src: url(/fonts/MyriadPro-Regular.otf?d75d7f70aa160104a45a743eae7a8a7e);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Object Sans";
-  src: url(/fonts/ObjectSans-Regular.eot?42b2031a8c0a631f2ca36a27be6ae83e);
-  src: url(/fonts/MyriadPro-Regular.eot?1d31e744cee077ef32f699ca2d3e8a0c) format("embedded-opentype"), url(/fonts/MyriadPro-Regular.woff?396e556a2d523ca7b2829a60a3b04732) format("woff"), url(/fonts/MyriadPro-Regular.ttf?be82e3850974c1ccddfcf305d93ad7ce) format("truetype");
+  src: url(/fonts/ObjectSans-Regular.otf?5b82442dbf02699c000fb5d8587c3ca3);
   font-weight: 400;
   font-style: normal;
 }
@@ -110,7 +101,7 @@ body {
 }
 
 .header__navigation .navigations {
-  margin-right: 110px;
+  margin-right: 100px;
 }
 
 .header__navigation .navigations nav {
@@ -170,11 +161,13 @@ body {
 
 .header__localization img {
   margin-right: 10px;
+  width: 22px;
+  height: 22px;
 }
 
 .header__localization .navig_localization {
   font-family: "Object Sans";
-  font-size: 16px;
+  font-size: 15px;
   line-height: 21px;
   display: flex;
   align-items: center;
@@ -185,7 +178,10 @@ body {
 
 .header__localization .navig_localization li {
   list-style-type: none;
-  width: 60px;
+}
+
+.header__localization .navig_localization li span {
+  font-size: 12px;
 }
 
 .home_search {
@@ -358,7 +354,7 @@ body {
 .invite_card .invite_body .invite_body_submits .invite_body_invite {
   font-family: "Object Sans";
   margin: auto 35px auto 0;
-  width: 200px;
+  width: 240px;
   height: 48px;
   border-radius: 4px;
   background: #EAB817;

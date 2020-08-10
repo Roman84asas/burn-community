@@ -46,7 +46,7 @@ const Header = () => {
             <div className="header__localization">
                 <img src={Localization} alt="Смена языка"/>
                 <ul className="navig_localization">
-                    <li>СНГ / РУ</li>
+                    <li>СНГ / <span>РУ</span></li>
                 </ul>
             </div>
         </header>

@@ -17,7 +17,7 @@
         display: flex;
         align-items: center;
         .navigations {
-            margin-right: 110px;
+            margin-right: 100px;
             nav {
                 display: flex;
                 align-items: center;
@@ -69,10 +69,12 @@
         align-items: center;
         img {
             margin-right: 10px;
+            width: 22px;
+            height: 22px;
         }
         .navig_localization {
             font-family: "Object Sans";
-            font-size: 16px;
+            font-size: 15px;
             line-height: 21px;
             display: flex;
             align-items: center;
@@ -81,7 +83,9 @@
             padding-left: 0;
             li {
                 list-style-type: none;
-                width: 60px;
+                span {
+                    font-size: 12px;
+                }
             }
         }
     }
