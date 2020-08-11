@@ -1,11 +1,11 @@
 .invite_card {
     background-image: url(../../../../assets/img/kalian_b2b.jpg);
     background-position: right;
-    background-repeat: no-repeat;
     min-height: 288px;
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 70px;
     &::before {
         content: "";
         background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);

@@ -1,3 +1,11 @@
 export { default as Header } from './Header';
 export { default as HomeSearch } from './HomeSearch';
 export { default as InviteB2B } from './InviteB2B';
+export { default as HomeAllArticlesAndInfo } from './HomeAllArticlesandInfo';
+export { default as Categories } from './Categories';
+export { default as BlockWithArticlesHome } from './BlockWithArticlesHome';
+export { default as Tags } from './Tags';
+export { default as HomeUsers } from './HomeUsers';
+export { default as KnowMoo } from './KnowMoo';
+export { default as ArticlesSectionHome } from './ArticlesSectinHome';
+export { default as Footer } from './Footer';

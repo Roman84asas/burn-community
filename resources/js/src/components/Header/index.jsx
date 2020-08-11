@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import LogoIcon from '../../../../assets/img/logotype.png'
 import VkIcon from '../../../../assets/img/vk.svg'
@@ -42,7 +42,12 @@ const Header = () => {
                     <img src={InstaIcon} alt="Наш интсаграмм"/>
                 </a>
             </div>
-            <a href="/" className="header__auth">Авторизация</a>
+            <NavLink
+                to="/"
+                className="header__auth"
+            >
+                Авторизация
+            </NavLink>
             <div className="header__localization">
                 <img src={Localization} alt="Смена языка"/>
                 <ul className="navig_localization">

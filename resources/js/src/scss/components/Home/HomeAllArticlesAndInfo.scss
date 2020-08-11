@@ -1,0 +1,210 @@
+.home_all_articles_and_info {
+    display: flex;
+    justify-content: space-between;
+    .home_all_articles {
+        //max-width: 800px;
+        width: 800px;
+        .home_all_articles_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            .home_all_articles_title {
+                font-family: "Myriad Pro";
+                font-weight: bold;
+                font-size: 28px;
+                line-height: 34px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.0024em;
+                color: $black;
+            }
+            .home_all_articles_link_forum {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                width: 200px;
+                height: 50px;
+                background: $yellow;
+                border-radius: 4px;
+                font-family: "Object Sans";
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 16px;
+                letter-spacing: 0.004em;
+                color: $black;
+            }
+        }
+        .home_articles_categories {
+            .home_articles_categories_lists {
+                display: flex;
+                justify-content: start;
+                padding-left: 0;
+                border-bottom: 1px solid $separator;
+                border-bottom: 25px;
+                li {
+                    font-family: "Helvetica Neue";
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.0048em;
+                    text-transform: uppercase;
+                    color: $black;
+                    padding-left: 32px;
+                    padding-right: 32px;
+                    padding-bottom: 10px;
+                    border-bottom: 4px solid $space-grey;
+                    cursor: pointer;
+                }
+                .home_articles_categories_lists_active {
+                    border-bottom: 4px solid #EAB817;
+                    border-radius: 0px 2px 0px 0px;
+                }
+            }
+        }
+        .block_with_articles_home {
+            .topic_link_home_block {
+                border-bottom: 1px solid $separator;
+                margin-bottom: 35px;
+                .topic_link_home_block_title {
+                    font-family: "Myriad Pro";
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.012em;
+                    color: $black;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+                .topic_link_home_block_description {
+                    max-width: 765px;
+                    font-family: "Helvetica Neue";
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 22px;
+                    letter-spacing: 0.01em;
+                    color: $grey;
+                    margin-bottom: 25px;
+                    .topic_link_home_block_slug {
+                        text-decoration: none;
+                        font-weight: normal;
+                        color: $black;
+                        margin-left: 5px;
+                    }
+                }
+                .topic_link_home_block_info {
+                    display: flex;
+                    width: 100%;
+                    .topic_link_home_block_info_image {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                    }
+                    .topic_link_home_block_info_all {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding-top: 5px;
+                        .topic_link_home_block_info_first {
+                            width: 100%;
+                            .topic_link_home_block_info_first_name {
+                                font-family: "Myriad Pro";
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 19px;
+                                display: flex;
+                                align-items: center;
+                                letter-spacing: 0.0048em;
+                                color: $black;
+                                margin-bottom: 10px;
+                                span {
+                                    font-weight: 600;
+                                    margin-right: 5px;
+                                }
+                            }
+                            .topic_link_home_block_info_first_desc {
+                                display: flex;
+                                justify-content: space-between;
+                                .desc_topic_home_block_info {
+                                    font-family: "Myriad Pro";
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                    letter-spacing: 0.0048em;
+                                    color: $black;
+                                    span {
+                                        color: $grey;
+                                    }
+                                }
+                                .desc_topic_home_block_info_ml {
+                                    display: flex;
+                                    .desc_topic_home_block_info_ml_messages {
+                                        font-family: "Myriad Pro";
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        line-height: 19px;
+                                        letter-spacing: 0.0048em;
+                                        color: $grey;
+                                        margin-right: 35px;
+                                        margin-bottom: 25px;
+                                        img {
+                                            width: 20px;
+                                            height: 20px;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                    .desc_topic_home_block_info_ml_like {
+                                        font-family: "Myriad Pro";
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        line-height: 19px;
+                                        letter-spacing: 0.0048em;
+                                        color: $grey;
+                                        margin-right: 35px;
+                                        img {
+                                            width: 20px;
+                                            height: 20px;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .block_with_articles_home_police {
+                margin-top: 75px;
+                max-width: 800px;
+                margin-bottom: 75px;
+                .block_with_articles_home_police_title {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                    font-family: "Myriad Pro";
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 29px;
+                    letter-spacing: 0.0024em;
+                    color: $black;
+                }
+                .block_with_articles_home_police_desc {
+                    font-family: "Myriad Pro";
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.0024em;
+                    color: $grey;
+                }
+            }
+        }
+    }
+    .tags_and_users {
+        max-width: 385px;
+    }
+}

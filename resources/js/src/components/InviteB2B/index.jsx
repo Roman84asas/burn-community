@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
+import {NavLink} from "react-router-dom";
 
 
 
@@ -11,8 +12,8 @@ const InviteB2B = () => {
                     <h2 className="invite_body_title">Для Вас кальянная индустрия - источник заработка или вы планируете начать бизнес в данной сфере ?</h2>
                     <p className="invite_body_description">Получите персональное приглашение в закрытый раздел Burn Community для B2b </p>
                     <div className="invite_body_submits">
-                        <a href="/" className="invite_body_invite">Получить приглашение</a>
-                        <a href="/" className="invite_body_submit">Войти</a>
+                        <NavLink to="/" className="invite_body_invite">Получить приглашение</NavLink>
+                        <NavLink to="/" className="invite_body_submit">Войти</NavLink>
                     </div>
                 </div>
             </div>

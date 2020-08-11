@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import {HomeSearch, InviteB2B} from "../../components/";
+import {HomeSearch, InviteB2B, HomeAllArticlesAndInfo, KnowMoo, ArticlesSectionHome, Footer} from "../../components/";
 
 
 const Home = () => {
@@ -26,6 +26,10 @@ const Home = () => {
                 </div>
             </div>
             <InviteB2B />
+            <HomeAllArticlesAndInfo />
+            <KnowMoo />
+            <ArticlesSectionHome />
+            <Footer />
         </div>
     )
 }

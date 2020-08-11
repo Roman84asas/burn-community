@@ -69,6 +69,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Myriad Pro", "Fira Sans", "Helvetica Neue", "Object Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F9F9F9;
 }
 
 .wrapper {
@@ -182,6 +183,86 @@ body {
 
 .header__localization .navig_localization li span {
   font-size: 12px;
+}
+
+.invite_card {
+  background-image: url(/images/kalian_b2b.jpg?9fca2366d63f8ca46c876d95c89b5d42);
+  background-position: right;
+  min-height: 288px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.invite_card::before {
+  content: "";
+  background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 288px;
+  width: 100%;
+}
+
+.invite_card .invite_body {
+  max-width: 720px;
+}
+
+.invite_card .invite_body .invite_body_title {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0024em;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.invite_card .invite_body .invite_body_description {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.004em;
+  color: #ECECEC;
+  margin-bottom: 25px;
+}
+
+.invite_card .invite_body .invite_body_submits {
+  display: flex;
+}
+
+.invite_card .invite_body .invite_body_submits .invite_body_invite {
+  font-family: "Object Sans";
+  margin: auto 35px auto 0;
+  width: 240px;
+  height: 48px;
+  border-radius: 4px;
+  background: #EAB817;
+  color: #100D00;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.004em;
+  text-decoration: none;
+}
+
+.invite_card .invite_body .invite_body_submits .invite_body_submit {
+  font-family: "Object Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.004em;
+  text-decoration: none;
+  color: #F9F9F9;
 }
 
 .home_search {
@@ -301,86 +382,6 @@ body {
   cursor: pointer;
 }
 
-.invite_card {
-  background-image: url(/images/kalian_b2b.jpg?9fca2366d63f8ca46c876d95c89b5d42);
-  background-position: right;
-  background-repeat: no-repeat;
-  min-height: 288px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.invite_card::before {
-  content: "";
-  background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);
-  left: 0;
-  top: 0;
-  position: absolute;
-  height: 288px;
-  width: 100%;
-}
-
-.invite_card .invite_body {
-  max-width: 720px;
-}
-
-.invite_card .invite_body .invite_body_title {
-  font-family: "Myriad Pro";
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.0024em;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-
-.invite_card .invite_body .invite_body_description {
-  font-family: "Helvetica Neue";
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: 0.004em;
-  color: #ECECEC;
-  margin-bottom: 25px;
-}
-
-.invite_card .invite_body .invite_body_submits {
-  display: flex;
-}
-
-.invite_card .invite_body .invite_body_submits .invite_body_invite {
-  font-family: "Object Sans";
-  margin: auto 35px auto 0;
-  width: 240px;
-  height: 48px;
-  border-radius: 4px;
-  background: #EAB817;
-  color: #100D00;
-  font-size: 16px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.004em;
-  text-decoration: none;
-}
-
-.invite_card .invite_body .invite_body_submits .invite_body_submit {
-  font-family: "Object Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.004em;
-  text-decoration: none;
-  color: #F9F9F9;
-}
-
 .home_info_content {
   display: flex;
 }
@@ -433,5 +434,564 @@ body {
   letter-spacing: 0.004em;
   color: #3E3E3E;
   margin: 0 auto 35px auto;
+}
+
+.home_all_articles_and_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_all_articles_and_info .home_all_articles {
+  width: 800px;
+}
+
+.home_all_articles_and_info .home_all_articles .home_all_articles_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.home_all_articles_and_info .home_all_articles .home_all_articles_top .home_all_articles_title {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+}
+
+.home_all_articles_and_info .home_all_articles .home_all_articles_top .home_all_articles_link_forum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  background: #EAB817;
+  border-radius: 4px;
+  font-family: "Object Sans";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.004em;
+  color: #100D00;
+}
+
+.home_all_articles_and_info .home_all_articles .home_articles_categories .home_articles_categories_lists {
+  display: flex;
+  justify-content: start;
+  padding-left: 0;
+  border-bottom: 1px solid #ECECEC;
+  border-bottom: 25px;
+}
+
+.home_all_articles_and_info .home_all_articles .home_articles_categories .home_articles_categories_lists li {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0048em;
+  text-transform: uppercase;
+  color: #100D00;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #F9F9F9;
+  cursor: pointer;
+}
+
+.home_all_articles_and_info .home_all_articles .home_articles_categories .home_articles_categories_lists .home_articles_categories_lists_active {
+  border-bottom: 4px solid #EAB817;
+  border-radius: 0px 2px 0px 0px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block {
+  border-bottom: 1px solid #ECECEC;
+  margin-bottom: 35px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_title {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.012em;
+  color: #100D00;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_description {
+  max-width: 765px;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #3E3E3E;
+  margin-bottom: 25px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_description .topic_link_home_block_slug {
+  text-decoration: none;
+  font-weight: normal;
+  color: #100D00;
+  margin-left: 5px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info {
+  display: flex;
+  width: 100%;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first {
+  width: 100%;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_name {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0048em;
+  color: #100D00;
+  margin-bottom: 10px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_name span {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0048em;
+  color: #100D00;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info span {
+  color: #3E3E3E;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info_ml {
+  display: flex;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info_ml .desc_topic_home_block_info_ml_messages {
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.0048em;
+  color: #3E3E3E;
+  margin-right: 35px;
+  margin-bottom: 25px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info_ml .desc_topic_home_block_info_ml_messages img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info_ml .desc_topic_home_block_info_ml_like {
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.0048em;
+  color: #3E3E3E;
+  margin-right: 35px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .topic_link_home_block .topic_link_home_block_info .topic_link_home_block_info_all .topic_link_home_block_info_first .topic_link_home_block_info_first_desc .desc_topic_home_block_info_ml .desc_topic_home_block_info_ml_like img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .block_with_articles_home_police {
+  margin-top: 75px;
+  max-width: 800px;
+  margin-bottom: 75px;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .block_with_articles_home_police .block_with_articles_home_police_title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+}
+
+.home_all_articles_and_info .home_all_articles .block_with_articles_home .block_with_articles_home_police .block_with_articles_home_police_desc {
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0024em;
+  color: #3E3E3E;
+}
+
+.home_all_articles_and_info .tags_and_users {
+  max-width: 385px;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_title {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  margin-top: 75px;
+  margin-bottom: 30px;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_carts {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 95px auto;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_carts .home_articles_section_cart {
+  width: 385px;
+  height: 335px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  position: relative;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_carts .home_articles_section_cart .home_articles_section_cart_body {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(249, 249, 249, 0) 20%, rgba(249, 249, 249, 0.8) 47.72%, #F9F9F9 55%);
+  bottom: 0;
+  left: 0;
+  padding: 145px 25px 25px 25px;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_carts .home_articles_section_cart .home_articles_section_cart_body .home_articles_section_cart_title {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #100D00;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.home_articles_section .home_articles_section_body .home_articles_section_carts .home_articles_section_cart .home_articles_section_cart_body .home_articles_section_cart_description {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #3E3E3E;
+  margin: 0;
+}
+
+.user_in_home {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: #F9F9F9;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-bottom: 75px;
+}
+
+.user_in_home .user_in_home_title {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.012em;
+  color: #100D00;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.user_in_home .user_in_home_body {
+  display: flex;
+  border-bottom: 1px solid #ECECEC;
+  margin-bottom: 15px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_body_name {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.0048em;
+  color: #100D00;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_body_address {
+  font-family: "Myriad Pro";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0048em;
+  color: #100D00;
+  margin-bottom: 5px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_body_address span:last-child {
+  margin-left: 5px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_all_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_all_info .user_in_home_messages {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0048em;
+  color: #3E3E3E;
+  margin-right: 25px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_all_info .user_in_home_messages img {
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_all_info .user_in_home_like {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.0048em;
+  color: #3E3E3E;
+}
+
+.user_in_home .user_in_home_body .user_in_home_body_telo .user_in_home_all_info .user_in_home_like img {
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+}
+
+.user_in_home .user_in_home_body:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.user_in_home .user_in_home_body:last-child .user_in_home_body_telo .user_in_home_all_info {
+  margin-bottom: 0;
+}
+
+.tags_all {
+  display: flex;
+  flex-direction: column;
+  background: #F9F9F9;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 28px 28px 28px 28px;
+  margin-bottom: 25px;
+}
+
+.tags_all .tags_title {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.012em;
+  color: #100D00;
+  margin-top: 0;
+}
+
+.tags_all .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags_all .tags .tag {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.004em;
+  line-height: 16px;
+  color: #3E3E3E;
+  text-decoration: none;
+  border: 1px solid #3E3E3E;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 7px 6px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: #100D00;
+  border: 1px solid #ECECEC;
+  min-height: 425px;
+}
+
+.footer .footer_body {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 55px;
+  margin-bottom: 80px;
+}
+
+.footer .footer_body .footer_navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footer_body .footer_navigation .footer_navigation_title {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  color: #ECECEC;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.footer .footer_body .footer_navigation .footer_link {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  color: #989898;
+  text-decoration: none;
+}
+
+.footer .footer_body .footer_navigation .footer_social {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.footer .footer_body .footer_navigation .footer_social a:first-child {
+  margin-right: 30px;
+}
+
+.footer .footer_body .footer_navigation .footer_social a:last-child {
+  margin-right: 0;
+}
+
+.footer .footer_body .info-block_footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3E3E3E;
+}
+
+.km_card {
+  min-height: 288px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.km_card .wrapper {
+  background: url(/images/kalian_moo.jpg?abcc39c097b876ff5fe6f7024d3732a6) center center no-repeat;
+  min-height: 288px;
+  padding: 55px 95px;
+}
+
+.km_card .wrapper .km_body {
+  max-width: 720px;
+}
+
+.km_card .wrapper .km_body .km_title {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0024em;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.km_card .wrapper .km_body .km_description {
+  font-family: "Helvetica Neue";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.004em;
+  color: #ECECEC;
+  margin-bottom: 25px;
+}
+
+.km_card .wrapper .km_body .km_submits {
+  display: flex;
+}
+
+.km_card .wrapper .km_body .km_submits .km_invite {
+  font-family: "Object Sans";
+  margin: auto 35px auto 0;
+  width: 200px;
+  height: 48px;
+  border-radius: 8px;
+  background: #EAB817;
+  color: #100D00;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.004em;
+  text-decoration: none;
 }
 

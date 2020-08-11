@@ -1,0 +1,94 @@
+.user_in_home {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: $space-grey;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    margin-bottom: 75px;
+    .user_in_home_title {
+        font-family: "Myriad Pro";
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.012em;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    .user_in_home_body {
+        display: flex;
+        border-bottom: 1px solid $separator;
+        margin-bottom: 15px;
+        .user_in_home_image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+        .user_in_home_body_telo {
+            .user_in_home_body_name {
+                font-family: "Myriad Pro";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.0048em;
+                color: $black;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+            .user_in_home_body_address {
+                font-family: "Myriad Pro";
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.0048em;
+                color: $black;
+                margin-bottom: 5px;
+                span:last-child {
+                    margin-left: 5px;
+                }
+            }
+            .user_in_home_all_info {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                .user_in_home_messages {
+                    font-family: inherit;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.0048em;
+                    color: $grey;
+                    margin-right: 25px;
+                    img {
+                        width: 13px;
+                        height: 13px;
+                        margin-left: 10px;
+                    }
+                }
+                .user_in_home_like {
+                    font-family: inherit;
+                    font-size: 13px;
+                    line-height: 16px;
+                    letter-spacing: 0.0048em;
+                    color: $grey;
+                    img {
+                        width: 13px;
+                        height: 13px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .user_in_home_body:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        .user_in_home_body_telo {
+            .user_in_home_all_info {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

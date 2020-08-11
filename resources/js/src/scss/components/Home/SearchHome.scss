@@ -1,5 +1,5 @@
 .home_search {
-    background: url(../../../../assets/img/kalian1.jpg) 100% 100% no-repeat;
+    background: url(../../../../../assets/img/kalian1.jpg) 100% 100% no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 513px;
@@ -69,7 +69,7 @@
             position: relative;
             &::before {
                 content: "";
-                background: url(../../../../assets/img/search-light.svg);
+                background: url(../../../../../assets/img/search-light.svg);
                 position: absolute;
                 left:15px;
                 top: 8px;
@@ -92,7 +92,7 @@
 
             }
             .search_home_submit {
-                background: url(../../../../assets/img/right-ligth.svg) center center no-repeat;
+                background: url(../../../../../assets/img/right-ligth.svg) center center no-repeat;
                 border: none;
                 width: 23px;
                 height: 23px;

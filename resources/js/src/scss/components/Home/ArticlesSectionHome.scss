@@ -1,0 +1,52 @@
+.home_articles_section {
+    .home_articles_section_body {
+        .home_articles_section_title {
+            font-family: "Myriad Pro";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: 0.0024em;
+            color: $black;
+            margin-top: 75px;
+            margin-bottom: 30px;
+        }
+        .home_articles_section_carts {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 95px auto;
+            .home_articles_section_cart {
+                width: 385px;
+                height: 335px;
+                box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05);
+                border-radius: 4px;
+                position: relative;
+                .home_articles_section_cart_body {
+                    position: absolute;
+                    background: linear-gradient(180deg, rgba(249, 249, 249, 0) 20%, rgba(249, 249, 249, 0.8) 47.72%, #F9F9F9 55%);
+                    bottom: 0;
+                    left: 0;
+                    padding: 145px 25px 25px 25px;
+                    .home_articles_section_cart_title {
+                        font-family: "Myriad Pro";
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: $black;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                    }
+                    .home_articles_section_cart_description {
+                        font-family: "Helvetica Neue";
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: $grey;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
