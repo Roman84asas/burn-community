@@ -11,7 +11,7 @@ const ArticlesSectionHome = () => {
                     Интересные статьи
                 </h3>
                 <div className="home_articles_section_carts">
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url(${TestImg})` }} >
+                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
                         <div className="home_articles_section_cart_body">
                             <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
                             <p className="home_articles_section_cart_description">
@@ -19,7 +19,7 @@ const ArticlesSectionHome = () => {
                             </p>
                         </div>
                     </NavLink>
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url(${TestImg})` }} >
+                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
                         <div className="home_articles_section_cart_body">
                             <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
                             <p className="home_articles_section_cart_description">
@@ -27,7 +27,7 @@ const ArticlesSectionHome = () => {
                             </p>
                         </div>
                     </NavLink>
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url(${TestImg})` }} >
+                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
                         <div className="home_articles_section_cart_body">
                             <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
                             <p className="home_articles_section_cart_description">

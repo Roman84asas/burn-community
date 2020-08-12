@@ -29,7 +29,7 @@ const Home = () => {
             <HomeAllArticlesAndInfo />
             <KnowMoo />
             <ArticlesSectionHome />
-            <Footer />
+
         </div>
     )
 }

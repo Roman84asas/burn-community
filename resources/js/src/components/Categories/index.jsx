@@ -1,6 +1,5 @@
 import React from 'react';
 
-import classNames from 'classnames'
 
 function Categories({ items, onClickItem }) {
     const [activeItem, setActiveItem] = React.useState(0);

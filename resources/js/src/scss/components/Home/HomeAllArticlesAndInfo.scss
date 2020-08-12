@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     .home_all_articles {
-        //max-width: 800px;
-        width: 800px;
+        max-width: 800px;
+        //width: 800px;
         .home_all_articles_top {
             display: flex;
             justify-content: space-between;
@@ -180,7 +180,7 @@
             .block_with_articles_home_police {
                 margin-top: 75px;
                 max-width: 800px;
-                margin-bottom: 75px;
+                margin-bottom: 35px;
                 .block_with_articles_home_police_title {
                     margin-top: 0;
                     margin-bottom: 20px;

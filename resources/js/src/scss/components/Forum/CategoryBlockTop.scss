@@ -1,0 +1,395 @@
+.category_block_top_body {
+    padding: 0;
+    margin-top: 25px;
+
+    .category_block_active {
+        background: #FFFFFF;
+        margin-top: 35px;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        .category_block_top_title {
+            min-height: 75px ;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-family: "Myriad Pro";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.0024em;
+                margin: 25px 25px 25px 40px;
+                color: $black;
+            }
+            .icon_when {
+                margin: 35px 45px 35px 45px;
+            }
+        }
+
+        .category_block_top_title_active {
+            border-bottom: 1px solid #989898;
+            min-height: 75px ;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-family: "Myriad Pro";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.0024em;
+                margin: 25px 25px 25px 40px;
+                color: $black;
+            }
+            .icon_when {
+                margin: 35px 45px 35px 45px;
+            }
+        }
+
+        .category_block_top_body {
+            display: none;
+            flex-direction: column;
+            padding: 0 48px 40px 48px;
+            margin-top: 0;
+            .subcategory_block {
+                display: flex;
+                border-bottom: 1px solid #ECECEC;
+                .subcategory_block_top_icon {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 27px;
+                        height: 27px;
+                        margin-right: 50px;
+                    }
+                }
+                .subcategory_block_top_subcategory {
+                    padding: 24px 0;
+                    width: 495px;
+                    .subcategory_block_top_subcategory_title {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                        text-decoration: none;
+                    }
+                    .subcategory_block_top_subcategory_desc {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 0.01em;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_themes {
+                    padding: 30px 0;
+                    width: 100px;
+                    .subcategory_block_top_themes_count {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
+                        text-align: right;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_messages {
+                    padding: 30px 0;
+                    width: 100px;
+                    .subcategory_block_top_themes_count {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
+                        text-align: right;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_author {
+                    display: flex;
+                    .subcategory_block_top_author_image {
+                        img {
+                            width: 49px;
+                            height: 49px;
+                            border-radius: 50%;
+                            margin: 25px 16px 25px 0;
+                        }
+                    }
+                    .subcategory_block_top_author_info {
+                        padding: 27px 0 30px 0;
+                        .subcategory_block_top_author_info_last_them {
+                            font-family: "Myriad Pro";
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 22px;
+                            color: $black;
+                            margin-bottom: 7px;
+                        }
+                        .subcategory_block_top_author_info_date {
+                            font-family: "Helvetica Neue";
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 22px;
+                            letter-spacing: 0.01em;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        .active {
+            display: flex;
+
+        }
+    }
+    .category_block_active:first-child {
+        .category_block_top_title {
+            min-height: 95px ;
+            width: auto;
+            h2 {
+                margin: 40px 25px 25px 40px;
+            }
+            .icon_when {
+                margin-top: 50px;
+            }
+        }
+        .category_block_top_title_active {
+            min-height: 95px ;
+            width: auto;
+            h2 {
+                margin: 40px 25px 25px 40px;
+            }
+            .icon_when {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .category_block {
+        border-top: 1px solid $dark-grey;
+        margin-top:0;
+        background: #FFFFFF;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 0 0 4px 4px;
+        .category_block_top_title {
+            min-height: 75px ;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-family: "Myriad Pro";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.0024em;
+                margin: 25px 25px 25px 40px;
+                color: $black;
+            }
+            .icon_when {
+                margin: 35px 45px 35px 45px;
+            }
+        }
+
+
+        .category_block_top_title_active {
+            border-bottom: 1px solid #989898;
+            min-height: 75px ;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-family: "Myriad Pro";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.0024em;
+                margin: 25px 25px 25px 40px;
+                color: $black;
+            }
+            .icon_when {
+                margin: 35px 45px 35px 45px;
+            }
+        }
+
+
+        .category_block_top_body {
+            display: none;
+            flex-direction: column;
+            padding: 0 48px 40px 48px;
+            margin-top: 0;
+            .subcategory_block {
+                display: flex;
+                border-bottom: 1px solid #ECECEC;
+                .subcategory_block_top_icon {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 27px;
+                        height: 27px;
+                        margin-right: 50px;
+                    }
+                }
+                .subcategory_block_top_subcategory {
+                    padding: 24px 0;
+                    width: 495px;
+                    .subcategory_block_top_subcategory_title {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                        text-decoration: none;
+                    }
+                    .subcategory_block_top_subcategory_desc {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 0.01em;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_themes {
+                    padding: 30px 0;
+                    width: 100px;
+                    .subcategory_block_top_themes_count {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
+                        text-align: right;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_messages {
+                    padding: 30px 0;
+                    width: 100px;
+                    .subcategory_block_top_themes_count {
+                        font-family: "Myriad Pro";
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 18px;
+                        text-align: right;
+                        color: $grey;
+                    }
+                }
+                .subcategory_block_top_author {
+                    display: flex;
+                    .subcategory_block_top_author_image {
+                        img {
+                            width: 49px;
+                            height: 49px;
+                            border-radius: 50%;
+                            margin: 25px 16px 25px 0;
+                        }
+                    }
+                    .subcategory_block_top_author_info {
+                        padding: 27px 0 30px 0;
+                        .subcategory_block_top_author_info_last_them {
+                            font-family: "Myriad Pro";
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 22px;
+                            color: $black;
+                            margin-bottom: 7px;
+                        }
+                        .subcategory_block_top_author_info_date {
+                            font-family: "Helvetica Neue";
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 22px;
+                            letter-spacing: 0.01em;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        .active {
+            display: flex;
+
+        }
+    }
+    .category_block:first-child {
+        border-top: none;
+        margin-top: 35px;
+        .category_block_top_title {
+            min-height: 95px ;
+            width: auto;
+            h2 {
+                margin: 40px 25px 25px 40px;
+            }
+            .icon_when {
+                margin-top: 50px;
+            }
+        }
+        .category_block_top_title_active {
+            min-height: 95px ;
+            width: auto;
+            h2 {
+                margin: 40px 25px 25px 40px;
+            }
+            .icon_when {
+                margin-top: 50px;
+            }
+        }
+    }
+    .category_block:nth-child(3) {
+        border-top: none;
+        margin-top: 35px;
+    }
+
+
+    .category_block_active:last-child {
+        margin-bottom: 40px;
+    }
+    .category_block:last-child {
+        margin-bottom: 40px;
+        border-top: none;
+        margin-top: 35px;
+    }
+
+}
+

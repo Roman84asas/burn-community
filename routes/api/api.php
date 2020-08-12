@@ -47,6 +47,7 @@ Route::group([
 
     //Домашняя
     Route::get('/', 'HomeController@index');
+    Route::get('/forum', 'HomeController@index');
 
 
     Route::get('/tag/{id}', 'TopicController@indexForTag');

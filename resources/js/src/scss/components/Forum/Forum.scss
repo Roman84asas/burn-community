@@ -1,12 +1,16 @@
-.invite_card {
-    background-image: url('../../../../assets/img/kalian_b2b.jpg');
+.invite_card_forum {
+    background-image: url('../../../../../assets/img/kalian_b2b.jpg');
+    background-repeat: no-repeat;
     background-position: right;
     min-height: 288px;
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
     margin-top: 35px;
+    border-radius: 8px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
     &::before {
         content: "";
         background: linear-gradient(90deg, #100D00 0%, #100D00 53.67%, rgba(16, 13, 0, 0) 76.75%);
@@ -14,11 +18,15 @@
         top: 0;
         position: absolute;
         height: 288px;
-        width: 100%
+        width: 100%;
+        border-radius: 8px;
     }
-    .invite_body {
+    .invite_body_forum {
         max-width: 720px;
-        .invite_body_title {
+        position: absolute;
+        top:55px;
+        left: 95px;
+        .invite_body_title_forum {
             font-family: "Myriad Pro";
             font-weight: 600;
             font-size: 28px;
@@ -28,8 +36,9 @@
             letter-spacing: 0.0024em;
             color: $wite;
             margin-bottom: 20px;
+            margin-top: 0;
         }
-        .invite_body_description {
+        .invite_body_description_forum {
             font-family: "Helvetica Neue";
             font-weight: normal;
             font-size: 18px;
@@ -38,9 +47,9 @@
             color: $separator;
             margin-bottom: 25px;
         }
-        .invite_body_submits {
+        .invite_body_submits_forum {
             display: flex;
-            .invite_body_invite {
+            .invite_body_invite_forum {
                 font-family: "Object Sans";
                 margin: auto 35px auto 0;
                 width: 240px;
@@ -56,7 +65,7 @@
                 letter-spacing: 0.004em;
                 text-decoration: none;
             }
-            .invite_body_submit {
+            .invite_body_submit_forum {
                 font-family: "Object Sans";
                 font-style: normal;
                 font-weight: normal;
@@ -69,6 +78,5 @@
                 color: $space-grey;
             }
         }
-
     }
 }

@@ -1,0 +1,86 @@
+.active_thems {
+    display: flex;
+    justify-content: space-between;
+    .active_them {
+        background: #FFFFFF;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        max-width: 595px;
+        margin-bottom: 32px;
+        .active_them_title {
+            border-bottom: 1px solid #989898;
+            padding: 45px 40px 30px 40px;
+            h2 {
+                font-family: "Myriad Pro";
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 18px;
+                letter-spacing: 0.0024em;
+                color: $black;
+                margin: 0;
+            }
+        }
+        .active_them_body {
+            .active_them_body_user {
+                min-height: 80px;
+                display: flex;
+                .active_them_body_user_image {
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        margin: 15px 16px 15px 48px;
+                    }
+                }
+                .active_them_body_user_thames {
+                    margin: 16px 0;
+                    width: 365px;
+                    a {
+                        font-family: "Helvetica Neue";
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                        margin-bottom: 10px;
+                    }
+                    .active_them_body_user_thames_info {
+                        font-family: "Helvetica Neue";
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                        margin-top: 5px;
+                    }
+                }
+                .active_them_body_user_all_info {
+                    width: 114px;
+                    .active_them_body_user_all_info_count {
+                        font-family: "Myriad Pro";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.012em;
+                        color: $black;
+                        margin: 20px 0 2px 0;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 22px;
+                        color: $grey;
+                    }
+                }
+            }
+        }
+    }
+
+}

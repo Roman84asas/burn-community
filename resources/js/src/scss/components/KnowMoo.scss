@@ -5,8 +5,10 @@
     align-items: center;
     .wrapper {
         background: url(../../../../assets/img/kalian_moo.jpg) center center no-repeat;
+        background-size: cover;
         min-height: 288px;
         padding: 55px 95px;
+        margin-top: 40px;
         .km_body {
             max-width: 720px;
             .km_title {
