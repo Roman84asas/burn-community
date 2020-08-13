@@ -26,7 +26,7 @@ const CategoryBlockTop = () => {
                     <img src={IconCategory} alt=""/>
                 </div>
                 <div className="subcategory_block_top_subcategory">
-                    <NavLink to='/forum' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
+                    <NavLink to='/category' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
                     <div className="subcategory_block_top_subcategory_desc">Ознакомьтесь с правилами форума</div>
                 </div>
                 <div className="subcategory_block_top_themes">
@@ -57,7 +57,7 @@ const CategoryBlockTop = () => {
                     <img src={IconCategory} alt=""/>
                 </div>
                 <div className="subcategory_block_top_subcategory">
-                    <NavLink to='/forum' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
+                    <NavLink to='/category' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
                     <div className="subcategory_block_top_subcategory_desc">Ознакомьтесь с правилами форума</div>
                 </div>
                 <div className="subcategory_block_top_themes">
@@ -88,7 +88,7 @@ const CategoryBlockTop = () => {
                     <img src={IconCategory} alt=""/>
                 </div>
                 <div className="subcategory_block_top_subcategory">
-                    <NavLink to='/forum' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
+                    <NavLink to='/category' className="subcategory_block_top_subcategory_title">Правила форума</NavLink>
                     <div className="subcategory_block_top_subcategory_desc">Ознакомьтесь с правилами форума</div>
                 </div>
                 <div className="subcategory_block_top_themes">

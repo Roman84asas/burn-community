@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 
 
-import {Home, Forum} from './page'
+import {Home, Forum, Category} from './page'
 import {Footer, Header} from './components'
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
             <div className="content">
                 <Route path='/' component={Home} exact/>
                 <Route path='/forum' component={Forum} exact/>
+                <Route path='/category' component={Category} exact/>
             </div>
             <Footer />
         </div>
