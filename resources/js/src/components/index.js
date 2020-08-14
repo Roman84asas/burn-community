@@ -15,4 +15,6 @@ export { default as Statistic } from './Statistic';
 export { default as ActiveThems } from './ActiveThems';
 export { default as CategoryBlockTop } from './CategoryBlockTop';
 export { default as CategoryBlock } from './CategoryBlock';
+export { default as ListsTopic } from './ListsTopic';
+export { default as LinkTopic } from './LinkTopic';
 export { default as Footer } from './Footer';

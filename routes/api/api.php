@@ -49,6 +49,7 @@ Route::group([
     Route::get('/', 'HomeController@index');
     Route::get('/forum', 'HomeController@index');
     Route::get('/category', 'HomeController@index');
+    Route::get('//category/subcategory', 'HomeController@index');
 
 
     Route::get('/tag/{id}', 'TopicController@indexForTag');

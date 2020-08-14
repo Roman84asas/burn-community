@@ -25,7 +25,7 @@ const CategoryBlock = () => {
                         <img src={IconCategory} alt=""/>
                     </div>
                     <div className="subcategory_block_top_subcategory">
-                        <NavLink to='/category' className="subcategory_block_top_subcategory_title">Законы о запрете курения</NavLink>
+                        <NavLink to='/category/subcategory' className="subcategory_block_top_subcategory_title">Законы о запрете курения</NavLink>
                     </div>
                     <div className="subcategory_block_top_themes">
                         <div className="subcategory_block_top_themes_count">5</div>
