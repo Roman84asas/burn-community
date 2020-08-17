@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
@@ -16,6 +18,7 @@ use Illuminate\Support\Str;
 
 class Topic extends Model
 {
+    //protected $dateFormat = 'U';
 
     /**
      * @var array
@@ -44,15 +47,45 @@ class Topic extends Model
         'published_at',
     ];
 
+    /**
+     * @param Builder $builder
+     * @return Builder
+     */
     public static function scopeLatestPublished(Builder $builder): Builder
     {
         return $builder
             ->with('user')
-            ->with('tags')
+            //->with('tags')
             ->latest('published_at')
             ->published();
     }
 
+    /**
+     * @param Builder $builder
+     * @return Builder
+     */
+    public static function scopeMooLikesPublished(Builder $builder): Builder
+    {
+        return $builder
+            ->with('user')
+            //->with('tags')
+            ->likes()
+            ->published();
+    }
+
+    /**
+     * @param Builder $builder
+     * @return Builder
+     */
+    public static function scopeWithoutMessage(Builder $builder): Builder
+    {
+        return $builder
+            ->with('user')
+            //->with('tags')
+            ->withoutMessages()
+            ->latest('published_at')
+            ->published();
+    }
 
 
     /**
@@ -62,6 +95,24 @@ class Topic extends Model
     public static function scopeLatest(Builder $builder): Builder
     {
         return $builder->orderBy('published_at', 'desc');
+    }
+
+    /**
+     * @param Builder $builder
+     * @return Builder
+     */
+    public static function scopeLikes(Builder $builder): Builder
+    {
+        return $builder->orderByRaw('cast(likes as decimal(20,2)) desc');
+    }
+
+    /**
+     * @param Builder $builder
+     * @return Builder
+     */
+    public static function scopeWithoutMessages(Builder $builder): Builder
+    {
+        return $builder->where('messages', '=', 0);
     }
 
     /**
@@ -113,11 +164,27 @@ class Topic extends Model
 
 
     /**
-     * @return MorphTo
+     * @return hasMany
+     */
+    public function messages(): hasMany
+    {
+        return $this->hasMany(Message::class);
+    }
+
+    /**
+     * @return BelongsTo
      */
     public function user(): BelongsTo
     {
         return $this->BelongsTo(User::class);
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function subcategory(): BelongsTo
+    {
+        return $this->BelongsTo(Subcategory::class);
     }
 
     /**
