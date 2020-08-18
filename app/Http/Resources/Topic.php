@@ -4,7 +4,7 @@
 namespace App\Http\Resources;
 
 
-use App\Models\Tag;
+use App\Models\Message;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -21,13 +21,14 @@ class Topic extends JsonResource
     {
         return [
             'id'                => $this->resource->id,
-            'user'              => User::find($this->resource->user_id),
+            'user'              => User::find($this->resource->user),
             'title'             => $this->resource->title,
             'description'       => $this->resource->description,
             'image'             => $this->resource->image,
             'content_rendered'  => $this->resource->content_rendered,
             'b2b'               => $this->resource->b2b,
             'slug'              => $this->resource->slug,
+            'messages'          => $this->resource->messages,
             'created_at'        => $this->resource->created_at->toDateTimeString(),
             'updated_at'        => $this->resource->updated_at->toDateTimeString(),
         ];

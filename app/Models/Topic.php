@@ -60,6 +60,19 @@ class Topic extends Model
             ->published();
     }
 
+    public static function scopeLatestPublishedMessage(Builder $builder, $id)
+    {
+        $topic = $topic = Topic::find(['id' => $id]);
+
+        //$user = User::find($messages->user_id);
+
+        return  [
+            'message' => $topic,
+            //'user'    => $user,
+        ];
+    }
+
+
     /**
      * @param Builder $builder
      * @return Builder

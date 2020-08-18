@@ -44,6 +44,7 @@ Route::group([
 
     //Группа Темы
     Route::get('topic', 'TopicController@index');
+    Route::get('topic/{id}', 'TopicController@indexForId');
 
     //Домашняя
     Route::get('/', 'HomeController@index');
