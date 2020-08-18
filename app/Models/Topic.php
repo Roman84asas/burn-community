@@ -55,21 +55,8 @@ class Topic extends Model
     {
         return $builder
             ->with('user')
-            //->with('tags')
             ->latest('published_at')
             ->published();
-    }
-
-    public static function scopeLatestPublishedMessage(Builder $builder, $id)
-    {
-        $topic = $topic = Topic::find(['id' => $id]);
-
-        //$user = User::find($messages->user_id);
-
-        return  [
-            'message' => $topic,
-            //'user'    => $user,
-        ];
     }
 
 
@@ -81,7 +68,6 @@ class Topic extends Model
     {
         return $builder
             ->with('user')
-            //->with('tags')
             ->likes()
             ->published();
     }
@@ -94,7 +80,6 @@ class Topic extends Model
     {
         return $builder
             ->with('user')
-            //->with('tags')
             ->withoutMessages()
             ->latest('published_at')
             ->published();
@@ -139,21 +124,6 @@ class Topic extends Model
             ->where('status', Article\Status::PUBLISHED);
     }
 
-
-    /**
-     * @param Authenticatable|null $user
-     * @return bool
-     */
-    /*public function isAllowedForUser(?Authenticatable $user): bool
-    {
-        $isAuthor = $user === null ? false : ($this->user->id === $user->getAuthIdentifier());
-
-        $isPublished = $this->status === Article\Status::PUBLISHED;
-
-        $isAllowPublishedTime = $this->published_at <= Carbon::now();
-
-        return $isAuthor || ($isPublished && $isAllowPublishedTime);
-    }*/
 
     /**
     * @return string

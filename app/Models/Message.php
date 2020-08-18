@@ -29,13 +29,13 @@ class Message extends Model
     ];
 
 
+
     public static function scopeTopicAsk(Builder $builder, $id): Builder
     {
         return $builder
             ->where('topic_id', $id)
             ->with('user');
     }
-
 
 
     /**

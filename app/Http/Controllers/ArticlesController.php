@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ArticlesCollection;
 use App\Models\Article;
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Str;
@@ -22,8 +23,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-
-        return new ArticlesCollection(Article::paginate(5));
+        return new ArticlesCollection(Article::paginate(6));
     }
 
     /**
@@ -35,10 +35,9 @@ class ArticlesController extends Controller
     {
         $article = Article::where('slug', $slug)->firstOrFail();
 
-        $user = $this->userArticle($article->user_id);
         return  [
-            'article' => $article,
-            'user'    => $user,
+            'article' => new ArticlesCollection(Article::find(['id', $article->id])),
+            'comments'    => Comment::articleAsk($article->id)->paginate(8),
         ];
     }
 
