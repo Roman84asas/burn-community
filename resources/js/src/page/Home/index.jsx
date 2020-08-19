@@ -1,10 +1,13 @@
 import React from 'react';
 
 
+import { homeApi } from '../../utils/fromApi'
+
 import {HomeSearch, InviteB2B, HomeAllArticlesAndInfo, KnowMoo, ArticlesSectionHome, Footer} from "../../components/";
 
 
 const Home = () => {
+    const data = homeApi.getHome().then(({ data }) => { console.log(data) });
     return(
         <div className="home_content">
             <HomeSearch />
@@ -29,7 +32,6 @@ const Home = () => {
             <HomeAllArticlesAndInfo />
             <KnowMoo />
             <ArticlesSectionHome />
-
         </div>
     )
 }

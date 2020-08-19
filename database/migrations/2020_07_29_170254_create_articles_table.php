@@ -21,6 +21,9 @@ class CreateArticlesTable extends Migration
             $table->string('image');
             $table->longText('content');
             $table->integer('views')->default(0);
+            $table->integer('like')->default(0);
+            $table->integer('dislike')->default(0);
+            $table->integer('comments')->default(0);
             $table->boolean('b2b')->default(false);
             $table->string('slug')->unique()->index();
             $table->timestamp('published_at');

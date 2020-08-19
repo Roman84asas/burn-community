@@ -23,10 +23,10 @@ Route::group([
     'middleware' => 'api',
 ], function (){
     //Группа утентификации
-    Route::post('/login', 'Auth\LoginController@login')->name('login');
-    Route::post('/refresh', 'Auth\LoginController@refresh')->name('refresh');
-    Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
-    Route::post('/register', 'Auth\RegisterController@register')->name('register');
+    Route::post('/login', 'Auth\LoginController@login');
+    Route::post('/refresh', 'Auth\LoginController@refresh');
+    Route::post('/logout', 'Auth\LoginController@logout');
+    Route::post('/register', 'Auth\RegisterController@register');
     Route::post('/confirm/{token}', function (string $token) {
         return response()->json([
             'success' => true,
@@ -47,10 +47,10 @@ Route::group([
     Route::get('topic/{id}', 'TopicController@indexForId');
 
     //Домашняя
-    Route::get('/', 'HomeController@index');
-    Route::get('/forum', 'HomeController@index');
+    Route::get('/', 'HomeController@index')->name('/');
+    Route::get('/forum', 'HomeController@index')->name('/forum');
     Route::get('/category', 'HomeController@index');
-    Route::get('//category/subcategory', 'HomeController@index');
+    Route::get('/category/subcategory', 'HomeController@index');
 
 
     Route::get('/tag/{id}', 'TopicController@indexForTag');
@@ -59,4 +59,4 @@ Route::group([
 
 
 //Группа требующая аутентификации
-Route::get('/profiles', 'UserController@index')->name('profiles')->middleware('auth');
+Route::get('/profiles', 'UserController@index')->middleware('auth');

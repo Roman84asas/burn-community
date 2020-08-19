@@ -72258,6 +72258,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/src/core/axios.js":
+/*!****************************************!*\
+  !*** ./resources/js/src/core/axios.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.baseURL = window.location.origin;
+var token = localStorage.getItem('token');
+/* harmony default export */ __webpack_exports__["default"] = (axios__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./resources/js/src/core/index.js":
+/*!****************************************!*\
+  !*** ./resources/js/src/core/index.js ***!
+  \****************************************/
+/*! exports provided: axios */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./axios */ "./resources/js/src/core/axios.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "axios", function() { return _axios__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/src/index.js":
 /*!***********************************!*\
   !*** ./resources/js/src/index.js ***!
@@ -72360,14 +72394,20 @@ var Forum = function Forum() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/ */ "./resources/js/src/components/index.js");
+/* harmony import */ var _utils_fromApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/fromApi */ "./resources/js/src/utils/fromApi/index.js");
+/* harmony import */ var _components___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/ */ "./resources/js/src/components/index.js");
+
 
 
 
 var Home = function Home() {
+  var data = _utils_fromApi__WEBPACK_IMPORTED_MODULE_1__["homeApi"].getHome().then(function (_ref) {
+    var data = _ref.data;
+    console.log(data);
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home_content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["HomeSearch"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_2__["HomeSearch"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home_info_content wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "info_content"
@@ -72393,7 +72433,7 @@ var Home = function Home() {
     className: "info_content_title"
   }, "\u041F\u043E\u043B\u0443\u0447\u0438 \u043F\u043E\u043C\u043E\u0449\u044C \u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "info_content_description"
-  }, "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0442\u0435\u0441\u044C \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u0440\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u043E\u043C\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["InviteB2B"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["HomeAllArticlesAndInfo"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["KnowMoo"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["ArticlesSectionHome"], null));
+  }, "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u044F\u0439\u0442\u0435\u0441\u044C \u043A \u0441\u0430\u043C\u043E\u043C\u0443 \u043A\u0440\u0443\u043F\u043D\u043E\u043C\u0443 \u043A\u0430\u043B\u044C\u044F\u043D\u043D\u043E\u043C\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_2__["InviteB2B"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_2__["HomeAllArticlesAndInfo"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_2__["KnowMoo"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_2__["ArticlesSectionHome"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -72555,6 +72595,41 @@ function unregister() {
     });
   }
 }
+
+/***/ }),
+
+/***/ "./resources/js/src/utils/fromApi/home.js":
+/*!************************************************!*\
+  !*** ./resources/js/src/utils/fromApi/home.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core */ "./resources/js/src/core/index.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getHome: function getHome() {
+    return _core__WEBPACK_IMPORTED_MODULE_0__["axios"].get('/api/');
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/src/utils/fromApi/index.js":
+/*!*************************************************!*\
+  !*** ./resources/js/src/utils/fromApi/index.js ***!
+  \*************************************************/
+/*! exports provided: homeApi */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./resources/js/src/utils/fromApi/home.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "homeApi", function() { return _home__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
 
 /***/ }),
 

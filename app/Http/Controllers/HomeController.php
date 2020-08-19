@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return /*view('app');*/[
+        return [
             'topicTop'       => Topic::mooLikesPublished()->take(5)->get(),
             'topicLatest'    => Topic::latestPublished()->take(5)->get(),
             'topicWiMessage' => Topic::withoutMessage()->take(5)->get(),
