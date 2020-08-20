@@ -5,7 +5,8 @@ import SvenImage from '../../../../assets/img/women.jpg'
 import MessageImage from '../../../../assets/img/message.svg'
 import LikeLImage from '../../../../assets/img/like-light.svg'
 
-const BlockWithArticlesHome = ( ) => {
+const BlockWithArticlesHome = ({items}) => {
+    console.log(items)
     return(
         <div className="block_with_articles_home">
             <div className="topic_link_home_block">

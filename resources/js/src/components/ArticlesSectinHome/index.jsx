@@ -1,9 +1,17 @@
 import React from 'react';
 import TestImg from '../../../../assets/img/test.jpg';
 import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 
-const ArticlesSectionHome = () => {
+const ArticlesSectionHome = ({articlesLatest}) => {
+    const  isLoading  = useSelector(({ home }) => home.isLoading)
+    let articles;
+    if(articlesLatest !== undefined && articlesLatest !== null) {
+        articles = articlesLatest.data
+    }
+
+
     return(
         <div className="home_articles_section">
             <div className="home_articles_section_body wrapper">
@@ -11,32 +19,19 @@ const ArticlesSectionHome = () => {
                     Интересные статьи
                 </h3>
                 <div className="home_articles_section_carts">
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
-                        <div className="home_articles_section_cart_body">
-                            <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
-                            <p className="home_articles_section_cart_description">
-                                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев бо...
-                            </p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
-                        <div className="home_articles_section_cart_body">
-                            <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
-                            <p className="home_articles_section_cart_description">
-                                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев бо...
-                            </p>
-                        </div>
-                    </NavLink>
-                    <NavLink to="/" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} >
-                        <div className="home_articles_section_cart_body">
-                            <h2 className="home_articles_section_cart_title">Получи помощь технической поддержки</h2>
-                            <p className="home_articles_section_cart_description">
-                                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев бо...
-                            </p>
-                        </div>
-                    </NavLink>
+                    { isLoading ?
+                        articles.map((article) => (
+                            <NavLink to={`/${article.slug}`} className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} key={`${article.id}_${article.b2b}`}>
+                                <div className="home_articles_section_cart_body">
+                                    <h2 className="home_articles_section_cart_title">{article.title}</h2>
+                                    <p className="home_articles_section_cart_description">
+                                        {article.description}...
+                                    </p>
+                                </div>
+                            </NavLink>
+                        )) : "Загружается"
+                    }
                 </div>
-
             </div>
         </div>
     )

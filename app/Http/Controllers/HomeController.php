@@ -30,7 +30,6 @@ class HomeController extends Controller
             'topicTop'       => Topic::mooLikesPublished()->take(5)->get(),
             'topicLatest'    => Topic::latestPublished()->take(5)->get(),
             'topicWiMessage' => Topic::withoutMessage()->take(5)->get(),
-            'news'           => new ArticlesCollection(Article::take(5)->get()),
             'topTags'        => GetTooIdInTag::GetTag(),
             'users'          => User::getTopUsers()->take(5)->get(),
             'articlesLatest' => new ArticlesCollection(Article::take(3)->get()),

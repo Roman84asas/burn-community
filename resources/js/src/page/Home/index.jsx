@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 
+import { fetchHome } from '../../redux/actions/home'
 
-import { homeApi } from '../../utils/fromApi'
-
-import {HomeSearch, InviteB2B, HomeAllArticlesAndInfo, KnowMoo, ArticlesSectionHome, Footer} from "../../components/";
+import {HomeSearch, InviteB2B, HomeAllArticlesAndInfo, KnowMoo, ArticlesSectionHome} from "../../components/";
 
 
 const Home = () => {
-    const data = homeApi.getHome().then(({ data }) => { console.log(data) });
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchHome())
+    }, [dispatch])
+
+    const {topicTop, topicLatest, topicWiMessage, topTags, users, articlesLatest } = useSelector(({ home }) => home.items)
+    const  isLoading  = useSelector(({ home }) => home.isLoading)
+
     return(
         <div className="home_content">
             <HomeSearch />
@@ -29,9 +37,16 @@ const Home = () => {
                 </div>
             </div>
             <InviteB2B />
-            <HomeAllArticlesAndInfo />
+            {isLoading ? <HomeAllArticlesAndInfo
+                topicTop={topicTop}
+                topicLatest={topicLatest}
+                topicWiMessage={topicWiMessage}
+                topTags={topTags}
+                users={users}
+            /> : "Загружается" }
+
             <KnowMoo />
-            <ArticlesSectionHome />
+            <ArticlesSectionHome articlesLatest={articlesLatest}/>
         </div>
     )
 }

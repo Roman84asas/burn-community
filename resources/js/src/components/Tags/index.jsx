@@ -3,17 +3,18 @@ import {NavLink} from "react-router-dom";
 
 
 
-const Tags = () => {
+const Tags = ({tags, isLoading}) => {
+
     return(
         <div className="tags_all">
             <h2 className="tags_title">Популярные тэги</h2>
             <div className="tags">
-                <NavLink to="/" className="tag">Рыба</NavLink>
-                <NavLink  to="/" className="tag">Текст</NavLink>
-                <NavLink to="/" className="tag">Всегда</NavLink>
-                <NavLink to="/" className="tag">Поможет</NavLink>
-                <NavLink to="/" className="tag">В сложную</NavLink>
-                <NavLink to="/" className="tag">Минуту</NavLink>
+                {
+                    tags.map((tag) => (
+                        <NavLink to={`/${tag.id}`} className="tag" key={`${tag.id}_${tag.name}`}>{tag.name}</NavLink>
+                    ))
+                }
+
             </div>
         </div>
     )
