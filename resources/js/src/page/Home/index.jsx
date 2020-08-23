@@ -15,7 +15,6 @@ const Home = () => {
 
     const {topicTop, topicLatest, topicWiMessage, topTags, users, articlesLatest } = useSelector(({ home }) => home.items)
     const  isLoading  = useSelector(({ home }) => home.isLoading)
-
     return(
         <div className="home_content">
             <HomeSearch />
