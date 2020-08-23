@@ -1,8 +1,8 @@
 import {homeApi} from "../../utils/fromApi";
-
+import {HomeConstants} from '../../_constans';
 
 export const setHome = items => ({
-    type: "HOME:GET_DATES",
+    type: HomeConstants.HOME_GET_DATES,
     payload: items,
     isLoading: true,
     });

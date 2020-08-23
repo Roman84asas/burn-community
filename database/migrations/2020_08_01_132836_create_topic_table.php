@@ -15,17 +15,17 @@ class CreateTopicTable extends Migration
     {
         Schema::create('topic', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id')->index('topic_user_id_index');
+            $table->unsignedInteger('user_id')->index();
+            $table->unsignedBigInteger('subcategories_id')->index();
             $table->string('title');
             $table->string('image')->nullable();
+            $table->longText('content');
             $table->string('slug')->unique()->index();
             $table->integer('messages')->default(0);
             $table->integer('likes')->default(0);
             $table->integer('views')->default(0);
-            $table->longText('content_rendered');
             $table->enum('status', [
                 'Draft',        // Черновик
-                'Review',       // Ожидает подтверждения
                 'Published',    // Опубликован
             ])->default('Draft');
             $table->boolean('b2b')->default(false);

@@ -44,7 +44,7 @@ const Header = () => {
                     </a>
                 </div>
                 <NavLink
-                    to="/"
+                    to="/register"
                     className="header__auth"
                 >
                     Авторизация

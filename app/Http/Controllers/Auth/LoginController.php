@@ -139,8 +139,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, User $user, string $token): Response
     {
-        /*$user->remember_token = $token;
-        $user->save();*/
+
         return response()->json([
             'success' => true,
             'data'    => array_merge([

@@ -24,6 +24,7 @@ Route::group([
 ], function (){
     //Группа утентификации
     Route::post('/login', 'Auth\LoginController@login');
+    Route::get('/login', 'Auth\LoginController@login');
     Route::post('/refresh', 'Auth\LoginController@refresh');
     Route::post('/logout', 'Auth\LoginController@logout');
     Route::post('/register', 'Auth\RegisterController@register');
@@ -48,12 +49,15 @@ Route::group([
 
     //Домашняя
     Route::get('/', 'HomeController@index')->name('/');
+    Route::get('/login', 'HomeController@index');
+    Route::get('/register', 'HomeController@index');
+    Route::get('/register/verify', 'HomeController@index');
     Route::get('/forum', 'HomeController@index')->name('/forum');
     Route::get('/category', 'HomeController@index');
     Route::get('/category/subcategory', 'HomeController@index');
 
 
-    Route::get('/tag/{id}', 'TopicController@indexForTag');
+    Route::get('/tags/{id}', 'TopicController@indexForTag');
 });
 
 

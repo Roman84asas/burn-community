@@ -11,7 +11,7 @@ const Tags = ({tags, isLoading}) => {
             <div className="tags">
                 {
                     tags.map((tag) => (
-                        <NavLink to={`/${tag.id}`} className="tag" key={`${tag.id}_${tag.name}`}>{tag.name}</NavLink>
+                        <NavLink to={`/tags/${tag.id}`} className="tag" key={`${tag.id}_${tag.name}`}>{tag.name}</NavLink>
                     ))
                 }
 

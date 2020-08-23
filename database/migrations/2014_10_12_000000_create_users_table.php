@@ -22,12 +22,16 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('country')->nullable();
             $table->string('city')->nullable();
+            $table->string('linkedIn')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('vkontakte')->nullable();
+            $table->string('veb_site')->nullable();
+            $table->string('birthday')->nullable();
             $table->integer('messages')->default(0);
             $table->integer('likes')->default(0);
             $table->integer('dislike')->default(0);
             $table->dateTime('last_activity')->nullable();;
             $table->boolean('is_confirmed')->default(false);
-            $table->string('api_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

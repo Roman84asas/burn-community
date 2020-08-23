@@ -1,3 +1,5 @@
+import {HomeConstants} from "../../_constans";
+
 const initialState = {
     items: [],
     isLoading: false
@@ -6,7 +8,7 @@ const initialState = {
 
 const home = ( state = initialState, { type, payload, isLoading } ) => {
     switch (type) {
-        case "HOME:GET_DATES":
+        case HomeConstants.HOME_GET_DATES:
             return {
                 ...state,
                 items: payload,

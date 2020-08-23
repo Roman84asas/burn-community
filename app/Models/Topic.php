@@ -3,22 +3,25 @@
 
 namespace App\Models;
 
+use App\Traits\HasUserSubcatandTagsTopic;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
 
 
 class Topic extends Model
 {
+    use Notifiable, HasUserSubcatandTagsTopic;
     //protected $dateFormat = 'U';
+
+
+    /**
+     * @var string
+     */
+    protected $table = 'topic';
 
     /**
      * @var array
@@ -28,11 +31,6 @@ class Topic extends Model
         'updated_at',
         'published_at'
     ];
-
-    /**
-     * @var string
-     */
-    protected $table = 'topic';
 
     /**
      * @var string[]
@@ -51,6 +49,7 @@ class Topic extends Model
      * @param Builder $builder
      * @return Builder
      */
+
     public static function scopeLatestPublished(Builder $builder): Builder
     {
         return $builder
@@ -84,7 +83,6 @@ class Topic extends Model
             ->latest('published_at')
             ->published();
     }
-
 
     /**
      * @param  Builder $builder
@@ -141,40 +139,6 @@ class Topic extends Model
         if ($this->published_at > Carbon::now()->subMonth()) {
             return $this->published_at->diffForHumans();
         }
-
         return $this->published_at->toDateTimeString();
-    }
-
-
-    /**
-     * @return hasMany
-     */
-    public function messages(): hasMany
-    {
-        return $this->hasMany(Message::class);
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function user(): BelongsTo
-    {
-        return $this->BelongsTo(User::class);
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function subcategory(): BelongsTo
-    {
-        return $this->BelongsTo(Subcategory::class);
-    }
-
-    /**
-     * @return BelongsToMany
-     */
-    public function tags(): BelongsToMany
-    {
-        return $this->belongsToMany(Tag::class, 'topic_tags');
     }
 }

@@ -18,6 +18,7 @@ class CreateSubcategoriesTable extends Migration
             $table->unsignedInteger('categories_id')->index();
             $table->string('name');
             $table->string('slug')->unique()->index();
+            $table->boolean('b2b')->default(false);
             $table->timestamps();
         });
     }
