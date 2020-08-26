@@ -17,9 +17,14 @@ export default ({ isAuth, values, errors }) => {
                 errors.password = "Слишком лёгкий пароль";
             }
         },
-        password_2: value => {
+        password_confirmation: value => {
             if (!isAuth && value !== values.password) {
-                errors.password_2 = "Пароли не совпадают";
+                errors.password_confirmation = "Пароли не совпадают";
+            }
+        },
+        name: value => {
+            if (!isAuth && !value) {
+                errors.name = "Укажите свое имя и фамилию";
             }
         }
     };

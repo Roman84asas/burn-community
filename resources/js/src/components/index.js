@@ -17,4 +17,6 @@ export { default as CategoryBlockTop } from './CategoryBlockTop';
 export { default as CategoryBlock } from './CategoryBlock';
 export { default as ListsTopic } from './ListsTopic';
 export { default as LinkTopic } from './LinkTopic';
+export { default as ProfileTopInfo } from './ProfileTopInfo';
+export { default as ProfileBody } from './ProfileBody';
 export { default as Footer } from './Footer';

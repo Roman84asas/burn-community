@@ -1,6 +1,7 @@
 import {userApi} from "../../utils/fromApi";
 
 import {UserConstants} from '../../_constans';
+import {useDispatch} from "react-redux";
 
 function requestCurrentUser() {
     return {
@@ -53,5 +54,29 @@ export function fetchLogin(postData) {
                 dispatch(receiveCurrentUser(body));
             })
             .catch((e) => dispatch(failureCurrentUser(e)));
+    };
+}
+export function fetchUserRegister(postData) {
+    return (dispatch) => {
+        userApi.signUp(postData).then((response) => response.data)
+            .then((body) => {
+                dispatch(fetchSuccessRegister(true));
+            })
+            .catch((err) => {
+                    dispatch(fetchFailRegister('Аккаунт с такой почтой уже создан.'));
+            })
+    }
+}
+
+export function fetchFailRegister(data) {
+    return  {
+        type: UserConstants.USER_FAIL_REGISTER,
+        data: data
+    };
+}
+export function fetchSuccessRegister(bool) {
+    return  {
+        type: UserConstants.USER_SUCCESS_REGISTER,
+        bool: bool
     };
 }

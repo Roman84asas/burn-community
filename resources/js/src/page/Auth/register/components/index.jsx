@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from "react-router-dom";
 
 import GoogleIn from "./GoogleIn";
-import FacebookIn from "./FacebookIn";
 import VKIn from "./VKIn";
 
 import validateField from '../../../../utils/helpers/validateField';
+import {useSelector} from "react-redux";
 
 
 const RegisterForm = (props) => {
@@ -19,6 +19,16 @@ const RegisterForm = (props) => {
         isValid,
         isSubmitting
     } = props;
+
+    const  dataReg  = useSelector(({ reg }) => reg.dataReg)
+    const  data  = useSelector(({ reg }) => reg.data)
+
+    useEffect(() => {
+        if (dataReg === true) {
+            props.history.push('/verify');
+        }
+    }, [dataReg])
+
     return(
         <div className="login_form">
             <h2 className='login_form_title'>Присоединяйтесь к BurnCommunity</h2>
@@ -28,9 +38,16 @@ const RegisterForm = (props) => {
                 и профессионал кальянной индустрии найдет полезную информацию.
             </div>
             <GoogleIn />
-            <FacebookIn />
             <VKIn />
             <form onSubmit={handleSubmit} className="form_reg">
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Ваш имя и фамилия..."
+                    value={values.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
                 <input
                     id="email"
                     type="text"
@@ -49,11 +66,11 @@ const RegisterForm = (props) => {
                     onBlur={handleBlur}
                 />
                 <input
-                    id="password_2"
-                    name="password_2"
+                    id="password_confirmation"
+                    name="password_confirmation"
                     type="password"
                     placeholder="Повторить пароль..."
-                    value={values.password_2}
+                    value={values.password_confirmation}
                     onChange={handleChange}
                     onBlur={handleBlur}
                 />
@@ -61,6 +78,7 @@ const RegisterForm = (props) => {
                     disabled={isSubmitting}
                     onClick={handleSubmit}
                     className="button_login"
+                    type="button"
                 >
                     Войти в аккаунт
                 </button>

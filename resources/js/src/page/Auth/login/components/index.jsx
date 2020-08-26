@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 
 import GoogleIn from "./GoogleIn";
-import FacebookIn from "./FacebookIn";
 import VKIn from "./VKIn";
 
 import {useSelector} from "react-redux";
@@ -37,7 +36,6 @@ const LoginForm = (props) => {
                 и профессионал кальянной индустрии найдет полезную информацию.
             </div>
             <GoogleIn />
-            <FacebookIn />
             <VKIn />
             <form onSubmit={handleSubmit} className="form_login">
                 <input

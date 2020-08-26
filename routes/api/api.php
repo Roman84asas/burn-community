@@ -37,7 +37,8 @@ Route::group([
 
 
     //Группа профиль
-    Route::get('profile/{id}', 'UserController@showProfile');
+    Route::get('/profile/{id}', 'UserController@showProfile');
+
 
     //Группа Статьи
     Route::get('articles', 'ArticlesController@index');
@@ -51,16 +52,18 @@ Route::group([
     Route::get('/', 'HomeController@index')->name('/');
     Route::get('/login', 'HomeController@index');
     Route::get('/register', 'HomeController@index');
-    Route::get('/register/verify', 'HomeController@index');
+    Route::get('/verify', 'HomeController@index');
     Route::get('/forum', 'HomeController@index')->name('/forum');
     Route::get('/category', 'HomeController@index');
     Route::get('/category/subcategory', 'HomeController@index');
 
 
     Route::get('/tags/{id}', 'TopicController@indexForTag');
+
+//Группа требующая аутентификации
+    //Route::get('/profiles', 'UserController@index')->middleware('auth');
+    //Route::get('/profile', 'UserController@profile')->middleware('jwt');
 });
 
 
 
-//Группа требующая аутентификации
-Route::get('/profiles', 'UserController@index')->middleware('auth');

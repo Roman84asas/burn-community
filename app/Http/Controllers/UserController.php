@@ -19,11 +19,20 @@ class UserController extends Controller
         return new UserCollection(User::all());
     }
 
+    public function profile()
+    {
+
+        $user = auth()->user();
+        return [
+            'user' => $user,
+        ];
+    }
+
 
     public function showProfile($id)
     {
         return [ 'user' => new ProfileCollection($user = User::find(['id' => $id])),
-        'online' => User::online(),
+                 'online' => User::online(),
             ];
     }
 }

@@ -1,0 +1,59 @@
+.verify_page {
+    width: 595px;
+    min-height: 500px;
+    background: #FFFFFF;
+    box-shadow: 28px 28px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    .verify_page_title {
+        margin: 120px auto 8px auto;
+        font-family: "Myriad Pro";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.0024em;
+        color: $black;
+    }
+    .verify_page_description {
+        max-width: 510px;
+        margin: 0 auto 24px auto;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.004em;
+        color: $grey;
+    }
+    .redirect_register {
+        background: #EAB817;
+        border-radius: 4px;
+        width: 75px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10px auto;
+
+        .register-link {
+            font-family: "Object Sans";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.004em;
+            color: #100D00;
+            text-decoration: none;
+        }
+    }
+    img {
+        width: auto;
+        height: 50%;
+    }
+}
