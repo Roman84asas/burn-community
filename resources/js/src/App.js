@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 
 
-import {Home, Forum, Category, Subcategory, Auth, Profile} from './page'
+import {Home, Forum, Category, Subcategory, Auth, Profile, Topic} from './page'
 import {Footer, Header} from './components'
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
                 <Route path='/profile/:id' component={Profile} />
                 <Route path='/category' component={Category} exact/>
                 <Route path='/category/subcategory' component={Subcategory} />
+                <Route path='/forum/category/subcategory/topic' component={Topic} />
             </div>
             <Footer />
         </div>

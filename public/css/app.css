@@ -3086,3 +3086,184 @@ body {
   margin-left: 40px;
 }
 
+.profile_body {
+  margin: 25px 0 95px 0;
+}
+
+.profile_body .profile_body_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_body .profile_body_top .profile_body_top_info {
+  display: flex;
+  align-items: center;
+}
+
+.profile_body .profile_body_top .profile_body_top_info img {
+  width: 130px;
+  height: 130px;
+  margin-left: 40px;
+  border-radius: 50%;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section {
+  margin-left: 32px;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_name {
+  display: flex;
+  align-items: center;
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #100D00;
+  margin-bottom: 16px;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_name span {
+  margin-left: 16px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_like_deslike {
+  display: flex;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_like_deslike .profile_body_top_info_section_in {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_like_deslike .profile_body_top_info_section_in img {
+  height: 24px;
+  width: 24px;
+  border-radius: unset;
+  margin-right: 18px;
+  margin-left: 0;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_like_deslike .profile_body_top_info_section_in span {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: #3E3E3E;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.profile_body .profile_body_top .profile_body_top_info .profile_body_top_info_section .profile_body_top_info_section_like_deslike .profile_body_top_info_section_in:last-child {
+  margin-right: 0;
+}
+
+.profile_body .profile_body_top .profile_body_top_add_contact_message {
+  display: flex;
+}
+
+.profile_body .profile_body_top .profile_body_top_add_contact_message .profile_body_top_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px 24px;
+  background-color: #100D00;
+  border-radius: 4px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-family: "Object Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.004em;
+  color: #FFFFFF;
+}
+
+.profile_body .profile_body_top .profile_body_top_add_contact_message .profile_body_top_add:last-child {
+  margin-right: 0;
+}
+
+.profile_body .profile_body_all {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile_body .profile_body_all .profile_body_all_section {
+  width: 592px;
+  min-height: 342px;
+  margin-right: 30px;
+  margin-bottom: 24px;
+  background: #FFFFFF;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.profile_body .profile_body_all .profile_body_all_section h2 {
+  margin: 40px 40px 24px 40px;
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+}
+
+.profile_body .profile_body_all .profile_body_all_section .profile_body_all_section_body {
+  border-top: 1px solid #989898;
+}
+
+.profile_body .profile_body_all .profile_body_all_section .profile_body_all_section_body .profile_body_all_section_params {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
+  align-items: center;
+  margin-right: 45px;
+  margin-left: 40px;
+}
+
+.profile_body .profile_body_all .profile_body_all_section .profile_body_all_section_body .profile_body_all_section_params .profile_body_all_section_params_name {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #3E3E3E;
+}
+
+.profile_body .profile_body_all .profile_body_all_section .profile_body_all_section_body .profile_body_all_section_params .profile_body_all_section_params_number {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.012em;
+  color: #100D00;
+}
+
+.profile_body .profile_body_all .profile_body_all_section .profile_body_all_section_body .profile_body_all_section_params:last-child {
+  margin-bottom: 40px;
+}
+
+.profile_body .profile_body_all .profile_body_all_section:nth-child(2) {
+  margin-right: 0;
+}
+
+.profile_body .profile_body_all .profile_body_all_section:nth-child(4) {
+  margin-right: 0;
+}
+

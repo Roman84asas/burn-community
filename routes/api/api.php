@@ -45,7 +45,7 @@ Route::group([
     Route::get('articles/{slug}', 'ArticlesController@show');
 
     //Группа Темы
-    Route::get('topic', 'TopicController@index');
+    Route::get('/forum/category/subcategory/topic', 'TopicController@index');
     Route::get('topic/{id}', 'TopicController@indexForId');
 
     //Домашняя

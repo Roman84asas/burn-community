@@ -19,4 +19,5 @@ export { default as ListsTopic } from './ListsTopic';
 export { default as LinkTopic } from './LinkTopic';
 export { default as ProfileTopInfo } from './ProfileTopInfo';
 export { default as ProfileBody } from './ProfileBody';
+export { default as Star } from './Star';
 export { default as Footer } from './Footer';
