@@ -12,7 +12,7 @@ import { Star } from "../";
 const ProfileBody = () => {
     const SendMessage = () => {alert('SendMessage')}
     const AddContact = () => {alert('AddContact')}
-    const stars = 4.5;
+    const stars = 3.5;
     return(
         <div className="profile_body">
             <div className="profile_body_top">

@@ -1,12 +1,14 @@
 import React from 'react';
-import {SearchForum} from "../../components";
+import {ProfileTopInfo, SearchForum, TopBody} from "../../components";
 
 
 
 const Topic = () => {
     return(
-        <div className="topic">
+        <div className="topic wrapper">
+            <ProfileTopInfo />
             <SearchForum />
+            <TopBody />
         </div>
     )
 }
