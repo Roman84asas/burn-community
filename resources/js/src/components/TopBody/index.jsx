@@ -7,6 +7,7 @@ import SelectIcon from '../../../../assets/img/selec.jpg';
 const TopBody = () => {
     return(
         <div className="topic_body_info">
+
            <div className="topic_body_info_top">
                <div className="topic_body_info_top_title">
                    <div className="topic_body_info_top_title_first">
