@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProfileTopInfo, SearchForum, TopBody} from "../../components";
+import {ProfileTopInfo, SearchForum, TopBody, TopicMessage, TopicModerate, TopicPaginate, TopicAllUser, TopicTags} from "../../components";
 
 
 
@@ -9,6 +9,13 @@ const Topic = () => {
             <ProfileTopInfo />
             <SearchForum />
             <TopBody />
+            <TopicMessage />
+            <div className="topic_moder">
+                <TopicModerate />
+                <TopicPaginate />
+            </div>
+            <TopicAllUser />
+            <TopicTags />
         </div>
     )
 }

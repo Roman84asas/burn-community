@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 
 
-import {Home, Forum, Category, Subcategory, Auth, Profile, Topic} from './page'
+import {Home, Forum, Category, Subcategory, Auth, Profile, Topic, Article} from './page'
 import {Footer, Header} from './components'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
                 <Route path='/register' component={Auth} exact/>
                 <Route path="/verify" component={Auth} exact/>
                 <Route path='/forum' component={Forum} exact/>
+                <Route path='/article' component={Article} />
                 <Route path='/profile/:id' component={Profile} />
                 <Route path='/category' component={Category} exact/>
                 <Route path='/category/subcategory' component={Subcategory} />

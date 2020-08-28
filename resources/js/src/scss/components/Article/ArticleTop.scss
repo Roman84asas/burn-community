@@ -1,0 +1,29 @@
+.article_top {
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    padding: 27px 40px 24px 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: $dark-grey;
+    a {
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: $dark-grey;
+        text-decoration: none;
+        margin-right: 7px;
+    }
+    img {
+        margin-right: 7px;
+        margin-bottom: 5px;
+    }
+}

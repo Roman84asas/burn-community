@@ -1,0 +1,31 @@
+.topic_all_user {
+    background: #F9F9F9;
+    width: 100%;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    margin-bottom: 24px;
+    .topic_all_user_top {
+        padding: 40px 40px 24px 40px;
+        display: flex;
+        align-items: center;
+        font-family: "Myriad Pro";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.0024em;
+        color: $black;
+    }
+    .topic_all_user_bottom {
+        padding: 24px 40px 40px 40px;
+        border-top: 1px solid #989898;
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: $grey;
+        span {
+            margin-left: 5px;
+        }
+    }
+}

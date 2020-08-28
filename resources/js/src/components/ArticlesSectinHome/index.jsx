@@ -21,7 +21,7 @@ const ArticlesSectionHome = ({articlesLatest}) => {
                 <div className="home_articles_section_carts">
                     { isLoading ?
                         articles.map((article) => (
-                            <NavLink to={`/${article.slug}`} className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} key={`${article.id}_${article.b2b}`}>
+                            <NavLink /*to={`/${article.slug}`}*/ to="/article" className="home_articles_section_cart" style={{backgroundImage: `url('${TestImg}')` }} key={`${article.id}_${article.b2b}`}>
                                 <div className="home_articles_section_cart_body">
                                     <h2 className="home_articles_section_cart_title">{article.title}</h2>
                                     <p className="home_articles_section_cart_description">

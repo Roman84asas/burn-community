@@ -2,4 +2,336 @@
     background: #FFFFFF;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
     margin-top: 24px;
+    .topic_body_info_top_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 42px 40px 25px 40px;
+        .topic_body_info_top_title_first {
+            display: flex;
+            align-items: center;
+            img {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                margin-right: 16px;
+            }
+            .topic_body_info_top_title_first_info {
+                .topic_body_info_top_title_first_info_title {
+                    font-family: "Myriad Pro";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.0024em;
+                    color: $black;
+                    margin-bottom: 8px;
+                }
+                .topic_body_info_top_title_first_info_descr {
+                    font-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 22px;
+                    letter-spacing: 0.01em;
+                    color: $grey;
+                }
+            }
+        }
+        .topic_body_info_top_title_second {
+            text-align: end;
+            .topic_body_info_top_title_second_all_msg {
+                font-family: "Helvetica Neue";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.01em;
+                color: $grey;
+                margin-bottom: 11px;
+            }
+            .topic_body_info_top_title_second_read {
+                display: flex;
+                align-items: center;
+                font-family: "Helvetica Neue";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.01em;
+                color: $grey;
+                cursor: pointer;
+                img {
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .topic_body_info_top_body {
+        padding: 24px 40px;
+        display: flex;
+        .topic_body_info_top_body_left {
+            box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+            margin-right: 32px;
+            .topic_body_info_top_body_left_img {
+                width: 240px;
+                height: 240px;
+                border-radius: 4px 4px 0 0;
+            }
+            .topic_body_info_top_body_left_info {
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .topic_body_info_top_body_left_info_name {
+                    font-family: "Myriad Pro";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 22px;
+                    letter-spacing: 0.01em;
+                    color: #100D00;
+                    margin-bottom: 4px;
+                    span {
+                        margin-left: 7px;
+                        border-radius: 50%;
+                        height: 8px;
+                        width: 8px;
+                    }
+                }
+                .topic_body_info_top_body_left_info_status {
+                    font-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    color: #100D00;
+                    margin-bottom: 5px;
+                }
+                .topic_body_info_top_body_left_info_groop {
+                    font-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    margin-top: 7px;
+                    margin-bottom: 8px;
+                }
+                .topic_body_info_top_body_left_info_all {
+                    font-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    color: $black;
+                    margin-bottom: 4px;
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .topic_body_info_top_body_right {
+            .topic_body_info_top_body_right_top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .topic_body_info_top_body_right_info {
+                    font-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 22px;
+                    letter-spacing: 0.01em;
+                    color: #989898;
+                }
+                .topic_body_info_top_body_right_top_device {
+                    display: flex;
+                    align-items: center;
+                    ont-family: "Helvetica Neue";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: right;
+                    letter-spacing: 0.01em;
+                    color: #989898;
+                    position: relative;
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 22px;
+                        text-align: right;
+                        letter-spacing: 0.01em;
+                        color: #989898;
+                        margin-right: 24px;
+                    }
+                    img {
+                        cursor: pointer;
+                    }
+                    .topic_body_info_top_body_right_top_device_popup {
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        bottom: -165px;
+                        width: 169px;
+                        background: #FFFFFF;
+                        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 4px;
+                        padding: 24px 16px 0 16px;
+                        text-align: left;
+                        .topic_body_info_top_body_right_top_device_popup_List {
+                            font-family: "Helvetica Neue";
+                            font-size: 16px;
+                            line-height: 19px;
+                            letter-spacing: 0.01em;
+                            color: #100D00;
+                            margin-bottom: 16px;
+                            cursor: pointer;
+                            -webkit-transition: all 0.3s ease-in-out;
+                            &:hover {
+                                color: $yellow;
+                                -webkit-transition: all 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                    .active {
+                        display: block;
+                    }
+                }
+            }
+            .topic_body_info_top_body_right_message {
+                font-family: "Helvetica Neue";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.01em;
+                color: #100D00;
+                a {
+                    color: $yellow;
+                    text-decoration: none;
+                }
+                margin-bottom: 16px;
+            }
+            .topic_body_info_top_body_right_subscr {
+                padding: 16px 0;
+                font-family: "Helvetica Neue";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.01em;
+                color: $dark-grey;
+                border-top: 1px solid #ECECEC;
+            }
+            .topic_body_info_top_body_right_bott {
+                margin-top: 8px;
+                border-top: 1px solid #989898;
+                padding-top: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .topic_body_info_top_body_right_bott_left {
+                    display: flex;
+                    .topic_body_info_top_body_right_bott_cr {
+                        width: 48px;
+                        height: 32px;
+                        background: #FFFFFF;
+                        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        margin-right: 16px;
+                    }
+                    .topic_body_info_top_body_right_bott_citata {
+                        width: 98px;
+                        height: 32px;
+                        background: #FFFFFF;
+                        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: "Object Sans";
+                        font-size: 14px;
+                        line-height: 14px;
+                        letter-spacing: 0.004em;
+                        color: #100D00;
+                        margin-right: 16px;
+                        cursor: pointer;
+                    }
+                    .topic_body_info_top_body_right_bott_up {
+                        width: 98px;
+                        height: 32px;
+                        background: #FFFFFF;
+                        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: "Object Sans";
+                        font-size: 14px;
+                        line-height: 14px;
+                        letter-spacing: 0.004em;
+                        color: #100D00;
+                        cursor: pointer;
+                    }
+                }
+                .topic_body_info_top_body_right_bott_right {
+                    display: flex;
+                    align-items: center;
+                    .topic_body_info_top_body_right_bott_like {
+                        display: flex;
+                        align-items: center;
+                        font-family: "Helvetica Neue";
+                        font-size: 12px;
+                        line-height: 14px;
+                        letter-spacing: 0.01em;
+                        color: $grey;
+                        margin-right: 25px;
+                        cursor: pointer;
+                        img {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 8px;
+                        }
+                    }
+                    .topic_body_info_top_body_right_bott_right_dislike {
+                        display: flex;
+                        align-items: center;
+                        font-family: "Helvetica Neue";
+                        font-size: 12px;
+                        line-height: 14px;
+                        letter-spacing: 0.01em;
+                        color: $grey;
+                        cursor: pointer;
+                        img {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.topic_moder {
+    margin: 16px 0 32px 0;
+    background: #FFFFFF;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
 }

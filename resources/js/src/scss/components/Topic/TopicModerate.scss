@@ -1,0 +1,66 @@
+.topic_moderator {
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    .topic_moderator_select {
+        position: relative;
+        width: 315px;
+        padding: 12px 16px 9px 16px;
+        border: 1px solid #989898;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: $admin;
+        cursor: pointer;
+    }
+    .topic_moderator_select_popup {
+        display: none;
+        position: absolute;
+        padding: 24px 16px 0 16px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        bottom: -150px;
+        width: 317px;
+
+        div {
+            font-family: "Helvetica Neue";
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.01em;
+            margin-bottom: 16px;
+            color: $admin;
+            cursor: pointer;
+        }
+    }
+    .active {
+        display: block;
+        z-index: 10;
+    }
+    .topic_moderator_confirm {
+        .topic_moderator_confirm_subb {
+            padding: 12px 24px;
+            background: $black;
+            border-radius: 4px;
+            ont-family: "Object Sans";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.004em;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+    }
+}

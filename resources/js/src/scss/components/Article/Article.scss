@@ -1,0 +1,90 @@
+.article_body_left {
+    margin-top: 32px;
+    max-width: 800px;
+    .article_body {
+        .article_body_title {
+            font-family: "Myriad Pro";
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 38px;
+            letter-spacing: 0.0024em;
+            color: $black;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .article_body_image {
+            width: 800px;
+            height: auto;
+            margin-top: 24px;
+        }
+        .article_body_text {
+            font-family: "Helvetica Neue";
+            font-size: 16px;
+            line-height: 22px;
+            color: $grey;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #989898;
+        }
+        .article_body_like_share {
+            padding: 16px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .article_body_like {
+                display: flex;
+                .article_body_like_left {
+                    margin-right: 34px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 24px;
+                        width: 24px;
+                        margin-right: 8px;
+                        cursor: pointer;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                    }
+                }
+                .article_body_like_right {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 24px;
+                        width: 24px;
+                        margin-right: 8px;
+                        cursor: pointer;
+                    }
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                    }
+                }
+            }
+            .article_body_share {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                    span {
+                        font-family: "Helvetica Neue";
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
