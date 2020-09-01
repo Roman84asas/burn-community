@@ -87,4 +87,78 @@
             }
         }
     }
+    .article_body_message {
+        margin-top: 35px;
+        background: #FFFFFF;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+        width: 100%;
+        .article_body_message_comments {
+            padding: 40px 40px 24px 40px;
+            border-bottom: 1px solid #989898;
+            font-family: "Myriad Pro";
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.0024em;
+            color: $black;
+            span {
+                font-family: "Myriad Pro";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 26px;
+                letter-spacing: 0.0024em;
+                margin-left: 8px;
+            }
+        }
+        .article_body_message_content {
+            padding: 24px 40px 1px 40px;
+            .article_body_message_content_input {
+                display: flex;
+                align-items: center;
+                margin-bottom: 32px;
+                .article_body_message_content_input_image {
+                    width: 48px;
+                    height: 48px;
+                    margin-right: 16px;
+                    border-radius: 50%
+                }
+                .article_body_message_content_input_inp_form {
+                    width: 100%;
+                    .article_body_message_content_input_inp {
+                        border: 1px solid $grey;
+                        box-sizing: border-box;
+                        display: flex;
+                        width: 100%;
+                        font-family: "Helvetica Neue";
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.004em;
+                        color: #989898;
+                        padding: 16px 16px 13px 16px;
+                    }
+                }
+            }
+        }
+    }
+    .sort_article {
+        background: #FFFFFF;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+        margin-top: 16px;
+        margin-bottom: 96px;
+        .lists_topics_top_sort {
+            border-bottom: none;
+        }
+    }
+}
+.article_body_right {
+    margin-left: 32px;
+    margin-top: 24px;
+    width: 100%;
+}
+.article_content {
+    display: flex;
+    width: 100%;
 }

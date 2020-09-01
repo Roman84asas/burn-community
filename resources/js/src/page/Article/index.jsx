@@ -1,12 +1,25 @@
 import React from 'react';
-import {ArticleTop} from "../../components/";
+import {ArticleTop, ArticleMessage, ListSort, ArticleOption} from "../../components/";
 
 import ArticleImage from '../../../../assets/img/article.jpg';
 import LikeImage from '../../../../assets/img/like-light.svg';
 import DisLikeImage from '../../../../assets/img/deslike-outlined.svg';
 import ShareImage from '../../../../assets/img/share.svg';
+import AdminImage from '../../../../assets/img/addmin.png';
 
 const Article = () => {
+    const [inputValue, SetValue] = React.useState("");
+    const handelChange = (e) => {
+        SetValue(e.target.value);
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Содержание формы: ' + inputValue)
+        SetValue("");
+    }
+    console.log(inputValue);
     return(
         <div className='article wrapper'>
             <ArticleTop />
@@ -44,9 +57,39 @@ const Article = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="article_body_message">
+                        <div className="article_body_message_comments">
+                            Комментарии <span>(36)</span>
+                        </div>
+                        <div className="article_body_message_content">
+                            <div className="article_body_message_content_input">
+                                <img src={AdminImage} alt="" className="article_body_message_content_input_image"/>
+                                <form onSubmit={handleSubmit} className="article_body_message_content_input_inp_form">
+                                    <input
+                                        type="text"
+                                        placeholder="Введите текст сообщения"
+                                        value={inputValue}
+                                        onChange={handelChange}
+                                        className="article_body_message_content_input_inp"
+                                    />
+                                </form>
+                            </div>
+                            <ArticleMessage />
+                            <ArticleMessage />
+                            <ArticleMessage />
+                            <ArticleMessage />
+                            <ArticleMessage />
+                            <ArticleMessage />
+                        </div>
 
+                    </div>
+                    <div className="sort_article">
+                        <ListSort />
+                    </div>
                 </div>
-                <div className="article_body_right"></div>
+                <div className="article_body_right">
+                    <ArticleOption />
+                </div>
             </div>
         </div>
     )

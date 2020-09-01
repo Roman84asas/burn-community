@@ -1,0 +1,95 @@
+.lists_topics_top_sort {
+    width: auto;
+    border-bottom: 1px solid #989898;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .lists_topics_top_sort_number_topics {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        .sort_numbers_topics {
+            display: flex;
+            div {
+                width: 42px;
+                height: 42px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                font-family: "Myriad Pro";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 12px;
+                letter-spacing: 0.0024em;
+                color: $black;
+                cursor: pointer;
+            }
+            .active {
+                background: $separator;
+            }
+            span {
+                font-family: "Myriad Pro";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                letter-spacing: 0.0024em;
+                color: #100D00;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .sort_numbers_topics_moo {
+            cursor: pointer;
+            font-family: "Helvetica Neue";
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.004em;
+            color: $black;
+            margin-left: 17px;
+            div {
+                margin-left: 7px;
+            }
+        }
+        .sort_numbers_topics_all {
+            margin: 0 24px;
+            font-family: "Helvetica Neue";
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.004em;
+            color: #3E3E3E;
+        }
+
+    }
+
+    .lists_topics_top_sort_category {
+        cursor: pointer;
+        margin-right: 40px;
+        padding: 19px 19px 16px 15px;
+        background: $separator;
+        border-radius: 4px;
+        display: flex;
+        li {
+            font-family: "Object Sans";
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            list-style-type: none;
+            letter-spacing: 0.004em;
+            text-transform: uppercase;
+            color: $black;
+        }
+        img {
+            width: 15px;
+            height: 10px;
+            margin-left: 13px;
+        }
+    }
+}
