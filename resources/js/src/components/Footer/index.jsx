@@ -16,7 +16,7 @@ const Footer = () => {
                     <NavLink to="/" className="footer_link">Топ сообщества</NavLink>
                     <NavLink to="/" className="footer_link">Карта сайта</NavLink>
                     <NavLink to="/" className="footer_link">RSS</NavLink>
-                    <NavLink to="/" className="footer_link">Рыба</NavLink>
+                    <NavLink to="/search" className="footer_link">Search</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>
                 </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <NavLink to="/" className="footer_link">Библиотека</NavLink>
                     <NavLink to="/" className="footer_link">Помощь</NavLink>
                     <NavLink to="/" className="footer_link">Связаться с нами</NavLink>
-                    <NavLink to="/" className="footer_link">Рыба</NavLink>
+                    <NavLink to="/search" className="footer_link">Search</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>

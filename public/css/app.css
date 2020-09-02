@@ -907,7 +907,7 @@ body {
 .lists_topics .lists_topics_bottom_sort .lists_topics_top_sort_number_topics {
   display: flex;
   align-items: center;
-  margin: 16px 40px;
+  margin: 0 40px;
 }
 
 .lists_topics .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics {
@@ -1319,6 +1319,60 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #3E3E3E;
+}
+
+.invite_section {
+  background: url(/images/invite.svg?76aa00b5470639a11fdbe392c885e4c8) center center no-repeat;
+  width: 100%;
+  height: 634px;
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
+.invite_section .invite_section_body {
+  padding: 350px 24px 40px 24px;
+}
+
+.invite_section .invite_section_body h2 {
+  margin-top: 0;
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.0024em;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.invite_section .invite_section_body p {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 0;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.004em;
+  color: #ECECEC;
+  margin-bottom: 24px;
+}
+
+.invite_section .invite_section_body .invite_section_button {
+  cursor: pointer;
+  font-family: "Object Sans";
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.004em;
+  color: #100D00;
+  padding: 16px;
+  background: #EAB817;
+  border-radius: 8px;
+  max-width: 195px;
 }
 
 .km_card {
@@ -4450,7 +4504,7 @@ body {
 }
 
 .article_body_right {
-  margin-left: 32px;
+  margin-left: 55px;
   margin-top: 24px;
   width: 100%;
 }
@@ -4504,7 +4558,7 @@ body {
   background: #F9F9F9;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -4557,5 +4611,259 @@ body {
 
 .article_option .article_option_right .article_option_date:last-child {
   margin-bottom: 0;
+}
+
+.search_option {
+  padding: 40px;
+  margin-top: 24px;
+  background: #FFFFFF;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.search_option .search_option_title {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.search_option .search_option_input {
+  width: 100%;
+  position: relative;
+}
+
+.search_option .search_option_input::before {
+  content: "";
+  background: url(/images/darck_search.svg?4157cb04198e57333eb7e72b6193e6e3);
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  height: 23px;
+  width: 23px;
+}
+
+.search_option .search_option_input .search_option_input_block {
+  width: 100%;
+  height: 40px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  letter-spacing: 0.004em;
+  color: #100D00;
+  border: 1px solid #100D00;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 50px;
+  padding-top: 5px;
+}
+
+.search_option .search_option_input input[type=text i] {
+  color: #100D00;
+  font-size: 16px;
+  letter-spacing: 0.004em;
+}
+
+.search_option .search_option_input .search_option_submit {
+  background: url(/images/darck-right.svg?7be14cab2f78a48e94498b1945bf9816) center center no-repeat;
+  border: none;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.search_option .search_option_content {
+  margin-top: 24px;
+}
+
+.search_option .search_option_content .search_option_content_title {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search_option .search_option_content .search_option_content_title img {
+  width: 14px;
+  height: 14px;
+  margin-right: 20px;
+}
+
+.search_option .search_option_content .search_option_content_title span {
+  font-family: "Myriad Pro";
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #100D00;
+}
+
+.search_option .search_option_content .active {
+  display: flex;
+}
+
+.search_option .search_option_content .search_option_content_body {
+  display: none;
+}
+
+.search_option .search_option_content .option_active {
+  display: flex;
+}
+
+.search_body .search_body_all {
+  width: 100%;
+  margin-top: 16px;
+  background: #FFFFFF;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.search_body .search_body_all .search_body_title {
+  padding: 40px 40px 25px 40px;
+  border-bottom: 1px solid #989898;
+}
+
+.search_body .search_body_all .search_body_title h2 {
+  margin: 0;
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0024em;
+  color: #989898;
+}
+
+.search_body .search_body_all .search_body_content {
+  padding: 24px 40px 40px 40px;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link {
+  width: auto;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #F9F9F9;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link .search_body_link_left {
+  margin-right: 16px;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link .search_body_link_left img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link .search_body_link_right .search_body_link_right_link {
+  margin-bottom: 8px;
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  text-decoration: none;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link .search_body_link_right .search_body_link_right_info {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+  color: #3E3E3E;
+}
+
+.search_body .search_body_all .search_body_content .search_body_link .search_body_link_right .search_body_link_right_content {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: #100D00;
+}
+
+.search_body .lists_topics_bottom_sort {
+  background: #FFFFFF;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 4px 4px 0px 0px;
+  margin-top: 16px;
+  margin-bottom: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics {
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics {
+  display: flex;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics div {
+  width: 42px;
+  height: 42px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 12px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  cursor: pointer;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics .active {
+  background: #ECECEC;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics span {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  display: flex;
+  align-items: center;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics_moo {
+  cursor: pointer;
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.004em;
+  color: #100D00;
+  margin-left: 17px;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics_moo div {
+  margin-left: 7px;
+}
+
+.search_body .lists_topics_bottom_sort .lists_topics_top_sort_number_topics .sort_numbers_topics_all {
+  margin: 0 24px;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.004em;
+  color: #3E3E3E;
 }
 

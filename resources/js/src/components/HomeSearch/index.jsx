@@ -48,8 +48,7 @@ const HomeSearch = () => {
                     <div className="home_search_input">
                         <input type="text" placeholder="Поиск по сообществу" value={inputValue} onChange={handeChange}  className="home_search_input_block" />
                         <input type="submit" value="" className="search_home_submit" onClick={clickSearchForm}/>
-                    <div />
-                </div>
+                    </div>
                 </div>
             </div>
         </div>

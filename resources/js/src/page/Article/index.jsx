@@ -1,5 +1,5 @@
 import React from 'react';
-import {ArticleTop, ArticleMessage, ListSort, ArticleOption} from "../../components/";
+import {ArticleTop, ArticleMessage, ListSort, ArticleOption, InviteSection} from "../../components/";
 
 import ArticleImage from '../../../../assets/img/article.jpg';
 import LikeImage from '../../../../assets/img/like-light.svg';
@@ -89,6 +89,7 @@ const Article = () => {
                 </div>
                 <div className="article_body_right">
                     <ArticleOption />
+                    <InviteSection />
                 </div>
             </div>
         </div>

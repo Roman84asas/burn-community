@@ -1,65 +1,76 @@
-.lists_topics {
-    .lists_topics_all_body {
-        background: $wite;
+.search_body {
+    .search_body_all {
+        width: 100%;
+        margin-top: 16px;
+        background: #FFFFFF;
         box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
-        border-radius: 4px 4px 0px 0px;
-        margin-top: 45px;
-        .lists_topics_top {
-            width: auto;
-            border-bottom: 1px solid #989898;
-            padding: 40px 40px 30px 40px;
+        .search_body_title {
+            padding: 40px 40px 25px 40px;
+            border-bottom: 1px solid $dark-grey;
             h2 {
+                margin: 0;
                 font-family: "Myriad Pro";
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 29px;
-                display: flex;
-                align-items: center;
                 letter-spacing: 0.0024em;
-                color: $black;
-                margin-top: 0;
-                margin-bottom: 8px;
+                color: $dark-grey;
             }
-            .lists_topics_top_content {
+        }
+        .search_body_content {
+            padding: 24px 40px 40px 40px;
+            .search_body_link {
+                width: auto;
+                margin-bottom: 24px;
+                padding: 24px;
+                background: $space-grey;
+                box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                .lists_topics_top_description {
-                    font-family: "Helvetica Neue";
-                    font-weight: normal;
-                    font-size: 16px;
-                    line-height: 22px;
-                    letter-spacing: 0.01em;
-                    color: $grey;
-                }
-                .lists_topics_top_check {
+                .search_body_link_left {
+                    margin-right: 16px;
                     img {
-                        width: 9.6px;
-                        height: 7.5px;
-                        margin-right: 10px;
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
                     }
-                    span {
+                }
+                .search_body_link_right {
+                    .search_body_link_right_link {
+                        margin-bottom: 8px;
+                        font-family: "Myriad Pro";
+                        font-weight: bold;
+                        font-size: 24px;
+                        letter-spacing: 0.0024em;
+                        color: $black;
+                        text-decoration: none;
+                    }
+                    .search_body_link_right_info {
                         font-family: "Helvetica Neue";
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 17px;
+                        font-size: 16px;
+                        line-height: 22px;
                         letter-spacing: 0.01em;
+                        margin-bottom: 24px;
                         color: $grey;
                     }
+                    .search_body_link_right_content {
+                        font-family: "Helvetica Neue";
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.01em;
+                        color: #100D00;
+                    }
                 }
             }
         }
-
-        .lists_topics_body {
-            margin: 0 48px;
-
-        }
     }
+
     .lists_topics_bottom_sort {
         background: $wite;
         box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.04);
         border-radius: 4px 4px 0px 0px;
         margin-top: 16px;
+        margin-bottom: 96px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -126,22 +137,6 @@
                 color: #3E3E3E;
             }
 
-        }
-        .lists_topics_top_check {
-            margin-right: 40px;
-            img {
-                width: 9.6px;
-                height: 7.5px;
-                margin-right: 10px;
-            }
-            span {
-                font-family: "Helvetica Neue";
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 17px;
-                letter-spacing: 0.01em;
-                color: $grey;
-            }
         }
     }
 
