@@ -54,6 +54,7 @@ Route::group([
     Route::get('/register', 'HomeController@index');
     Route::get('/verify', 'HomeController@index');
     Route::get('/search', 'HomeController@index');
+    Route::get('/help', 'HomeController@index');
     Route::get('/forum', 'HomeController@index')->name('/forum');
     Route::get('/category', 'HomeController@index');
     Route::get('/category/subcategory', 'HomeController@index');

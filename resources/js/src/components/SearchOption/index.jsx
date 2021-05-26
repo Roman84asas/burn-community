@@ -23,7 +23,7 @@ const SearchOption = () => {
             <div className="search_option_input">
                 <input type="text" placeholder="Поиск по сообществу" value={inputValue} onChange={handleChange}  className="search_option_input_block" />
                 <input type="submit" value="" className="search_option_submit" onClick={clickSearchForm}/>
-                </div>
+            </div>
             <div className="search_option_content">
                 <div className={showOption ? `search_option_content_title active` : `search_option_content_title`} onClick={clickShowOption}>
                     <img src={KrestIcon} alt=""/>

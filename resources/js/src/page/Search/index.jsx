@@ -8,7 +8,6 @@ const Search = () => {
             <ArticleTop />
             <SearchOption />
             <SearchBody />
-
         </div>
     )
 }

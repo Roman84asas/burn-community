@@ -73,8 +73,6 @@ const SearchBody = () => {
                     </div>
                 </div>
             </div>
-
-
             <div className="lists_topics_bottom_sort">
                 <div className="lists_topics_top_sort_number_topics">
                     <div className="sort_numbers_topics">

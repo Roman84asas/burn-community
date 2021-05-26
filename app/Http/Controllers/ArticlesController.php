@@ -61,7 +61,7 @@ class ArticlesController extends Controller
      * @return array
      * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
      */
-    public function userArticle($id)
+    public function userArticle(string $id)
     {
         return [
             User::find(['id' => $id]),

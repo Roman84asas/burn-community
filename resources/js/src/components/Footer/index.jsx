@@ -23,7 +23,7 @@ const Footer = () => {
                 <div className="footer_navigation">
                     <h2 className="footer_navigation_title">Раздел 2</h2>
                     <NavLink to="/" className="footer_link">Библиотека</NavLink>
-                    <NavLink to="/" className="footer_link">Помощь</NavLink>
+                    <NavLink to="/help" className="footer_link">Помощь</NavLink>
                     <NavLink to="/" className="footer_link">Связаться с нами</NavLink>
                     <NavLink to="/search" className="footer_link">Search</NavLink>
                     <NavLink to="/" className="footer_link">Рыба</NavLink>

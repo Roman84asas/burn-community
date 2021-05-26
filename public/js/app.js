@@ -80844,6 +80844,9 @@ function App() {
     path: "/search",
     component: _page__WEBPACK_IMPORTED_MODULE_2__["Search"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/help",
+    component: _page__WEBPACK_IMPORTED_MODULE_2__["Help"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/profile/:id",
     component: _page__WEBPACK_IMPORTED_MODULE_2__["Profile"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -81859,7 +81862,7 @@ var Footer = function Footer() {
     to: "/",
     className: "footer_link"
   }, "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
-    to: "/",
+    to: "/help",
     className: "footer_link"
   }, "\u041F\u043E\u043C\u043E\u0449\u044C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     to: "/",
@@ -81963,7 +81966,7 @@ var Header = function Header() {
   }, "\u041E\u043D\u043B\u0430\u0439\u043D \u0448\u043A\u043E\u043B\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/"
+    to: "/help"
   }, "\u041F\u043E\u043C\u043E\u0449\u044C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"
   }, "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u044B")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -85079,6 +85082,73 @@ var Forum = function Forum() {
 
 /***/ }),
 
+/***/ "./resources/js/src/page/Help/index.jsx":
+/*!**********************************************!*\
+  !*** ./resources/js/src/page/Help/index.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var Help = function Help() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      inputValue = _useState2[0],
+      SetValue = _useState2[1];
+
+  var handleChange = function handleChange(e) {
+    SetValue(e.target.value);
+  };
+
+  var clickSearchForm = function clickSearchForm(e) {
+    e.preventDefault();
+    alert('Содержание формы: ' + inputValue);
+    SetValue("");
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "help_content "
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "help_content_body wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "help_content_title"
+  }, "\u041F\u043E\u043B\u0443\u0447\u0438 \u043F\u043E\u043C\u043E\u0449\u044C \u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "help_content_search"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    placeholder: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\u0443",
+    value: inputValue,
+    onChange: handleChange,
+    className: "search_option_input_block"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "submit",
+    value: "",
+    className: "search_option_submit",
+    onClick: clickSearchForm
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Help);
+
+/***/ }),
+
 /***/ "./resources/js/src/page/Home/index.jsx":
 /*!**********************************************!*\
   !*** ./resources/js/src/page/Home/index.jsx ***!
@@ -85270,7 +85340,7 @@ var Topic = function Topic() {
 /*!****************************************!*\
   !*** ./resources/js/src/page/index.js ***!
   \****************************************/
-/*! exports provided: Home, Profile, Auth, Forum, Category, Subcategory, Topic, Article, Search */
+/*! exports provided: Home, Profile, Auth, Forum, Category, Subcategory, Topic, Article, Search, Help */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85301,6 +85371,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Search */ "./resources/js/src/page/Search/index.jsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Search", function() { return _Search__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
+/* harmony import */ var _Help__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Help */ "./resources/js/src/page/Help/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Help", function() { return _Help__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
 
 
 

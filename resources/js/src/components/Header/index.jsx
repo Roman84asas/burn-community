@@ -26,7 +26,7 @@ const Header = () => {
                             <Link to="/">
                                 Библиотека
                             </Link>
-                            <Link to="/">
+                            <Link to="/help">
                                 Помощь
                             </Link>
                             <Link to="/">

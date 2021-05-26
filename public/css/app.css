@@ -4867,3 +4867,61 @@ body {
   color: #3E3E3E;
 }
 
+.help_content .help_content_body .help_content_title {
+  margin: 40px auto 32px auto;
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.0024em;
+  color: #100D00;
+  max-width: 596px;
+}
+
+.help_content .help_content_body .help_content_search {
+  width: 540px;
+  position: relative;
+  margin: 0 auto 40px auto;
+}
+
+.help_content .help_content_body .help_content_search::before {
+  content: "";
+  background: url(/images/darck_search.svg?4157cb04198e57333eb7e72b6193e6e3);
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  height: 23px;
+  width: 23px;
+}
+
+.help_content .help_content_body .help_content_search .search_option_input_block {
+  width: 100%;
+  height: 40px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  letter-spacing: 0.004em;
+  color: #100D00;
+  border: 1px solid #100D00;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 50px;
+  padding-top: 5px;
+}
+
+.help_content .help_content_body .help_content_search input[type=text i] {
+  color: #100D00;
+  font-size: 16px;
+  letter-spacing: 0.004em;
+}
+
+.help_content .help_content_body .help_content_search .search_option_submit {
+  background: url(/images/darck-right.svg?7be14cab2f78a48e94498b1945bf9816) center center no-repeat;
+  border: none;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  cursor: pointer;
+}
+
